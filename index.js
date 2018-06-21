@@ -22,14 +22,14 @@ if (msg.channel.name == 'raids-marcacao') {
      var text = msg.content.substring(1);
  
 	  
-   text='**RAID '+text+'**'	  
+   //text='**RAID '+text+'**'	  
 	  
 	  
     
-      // msg.reply(text);
-	msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage(text);
-	//msg.channel.fetchMessage();
-  
+      if (msg.content === 'willow') {
+    msg.reply('Olá, eu sou o Prof. Willow RAIDS PN\n'+
+    'e vou ajudar-te a marcar as RAIDS.\n\nAinda estou em desenvolvimento.\n\n :stuck_out_tongue_winking_eye:');
+  }
   
   }   // fim do inicio carater
  
