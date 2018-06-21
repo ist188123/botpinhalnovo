@@ -27,10 +27,18 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
 	  
     
       if (msg.content === '!willow') {
-    msg.reply('Olá, eu sou o Prof. Willow RAIDS PN\n'+
-    'e vou ajudar-te a marcar as RAIDS.\n\nAinda estou em desenvolvimento.\n\n :stuck_out_tongue_winking_eye:');
+    msg.reply('Olá,\nEu sou o Prof. Willow.\n\n'+
+    'E vou ajudar-te a marcar as RAIDS no Pinhal Novo.\n\nAinda estou em desenvolvimento, mas podes sempre falar comigo.\n\n :stuck_out_tongue_winking_eye:');
   }
   
+	  
+   if (msg.content === '!5') {
+    msg.reply('**\nRAID '+msg.content+'**');
+  }
+  	  
+	  
+	  
+	  
   }   // fim do inicio carater
  
 	
