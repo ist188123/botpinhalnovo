@@ -37,7 +37,18 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
   }
   	  
 	  
-	  
+if (msg.content === '!mewtwo') {
+    msg.reply('**\nMEWTWO**\n\nCP 2275 100% sem weather bost\n\nCP 2844 100% IV com weather bost (WINDY)\n\n'+
+	      'Melhores para o combater *Sem focus blast*:\n\n'+
+	     '*Tyranitar*\n'+
+	      '*Mewtwo*\n'+
+	       '*Houndoom*\n'+
+	       '*Scizor*\n'+
+	      '*Pinsir*\n'+
+	      '*Dragonite*\n'
+	      
+	     );
+  }	  
 	  
   }   // fim do inicio carater
  
