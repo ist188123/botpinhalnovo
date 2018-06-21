@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('message', msg => {
   
 	
-if (msg.channel.name == 'raids-marcacao') {
+if (msg.channel.name == 'prof-willow-raids-pn') {
 		
 
 	
@@ -26,7 +26,7 @@ if (msg.channel.name == 'raids-marcacao') {
 	  
 	  
     
-      if (msg.content === 'willow') {
+      if (msg.content === 'willow) {
     msg.reply('Olá, eu sou o Prof. Willow RAIDS PN\n'+
     'e vou ajudar-te a marcar as RAIDS.\n\nAinda estou em desenvolvimento.\n\n :stuck_out_tongue_winking_eye:');
   }
