@@ -33,7 +33,7 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
 	  
 	
   //LE A MENSAGEM EXCLUINDO O !
-     //var text = msg.content.substring(1);
+     var text = msg.content.substring(1);
  
 	  
    text='RAID '+text	  
@@ -60,7 +60,7 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
-  .addField("Treinadores:", "Damas010\nSDamasc022.", true)
+  .addField("Treinadores:", "Damas010\nSDamasc022\nDordio", true)
   /*
    * Blank field, useful to create some space.
    */
