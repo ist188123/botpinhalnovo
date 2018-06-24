@@ -1,48 +1,49 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
+
+
+
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 
 
+
 client.on('message', msg => {
-  
-	
-if (msg.channel.name == 'prof-willow-raids-pn') {
-		
+
+
+//funcao
+
+
+function criaRaid(ncanal,text,treinador){
+  //inicio mensagem
+	//var totaltreinadores=treinador.trim().split("@")
+	//"!raid5 piscina !12h30".substring(1)
+			var titulo="RAID 5 "+ncanal.substr(7)
+			var thoras=titulo.split("-")
+			var horas=thoras[thoras.length-1]
+	y=thoras
+var local=""
+
+for (var i=0;i<y.length-1;i++){
+   local=local+" "+y[i]
+   
+}
 
 	
-  //SE A MENSAGEM INICIA COM O CARATER !
-  if (msg.content.indexOf('!') === 0) {
-	  
-	  
-  //LE A MENSAGEM EXCLUINDO O !
-     var text = msg.content.substring(1);
- 
-	  
-   //text='**RAID '+text+'**'	  
-	  
-	  
-	  
-	  
-	 //marcacao raid 5 
-	  
-	   if(msg.content.startsWith("!5")){
-	  
+	 msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage("Utilize o canal para registo "+msg.guild.channels.find("name", msg.channel.name));	  
 	
-  //LE A MENSAGEM EXCLUINDO O !
-     var text = msg.content.substring(1);
- 
-	  
-   text='RAID '+text	  
-	  
-    //inicio mensagem
+	
+	
    const embed = new Discord.RichEmbed()
-  .setTitle(text.substr(text.indexOf('!')+1))
-  .setAuthor(text.substr(0,text.indexOf('!')-1), "https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png")
-  /*
+   .setTitle(horas)
+  .setAuthor(local.toUpperCase(), "https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png")
+  
+   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor(0x00AE86)
@@ -58,12 +59,13 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
   .addField("Niveis CP",
    "1682 - 1764 / 2103-2205 Nuvens(cloudy)\n\n")
   /*
-   * Inline fields may not display as inline if the thumbnail and/or image is too big.
+   * lista dos jogadores que vão RAID.
    */
-  .addField("Treinadores:", "Damas010\nSDamasc022\nDordio", true)
+  .addField("Treinadores:[X]",treinador , true)
   /*
    * Blank field, useful to create some space.
    */
+   
   .addBlankField(true)
   .addField("\n\n\n\n\n\Fraco contra:", "Entei (Fire Spin/Overheat)\n" +
 "Moltres (Fire Spin/Overheat)\n" +
@@ -75,44 +77,115 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
 "Blaziken (Counter/Overheat)\n" +
 "Breloom (Counter/Dynamic Punch)", true);  
    msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({embed});	  
+	
+
+
+
+
+}
+
+
+
+// fim funcao
+
+
+
+
+
+
+
+
+
+  
+	
+	 
+ 
+
+	
+	
+	
+	
+	
+	
+	if (msg.channel.name.startsWith('_raid')) {
+		
+		
+		
+		
+		if(msg.author.bot) return;
+		
+		//if(msg.content.startsWith("!")){
+	      //  msg.guild.channels.find("name",msg.channel.name).sendMessage("Inserido na RAID :"+msg.author.toString());	
+		
+			//var mensagem=msg.author.toString()+msg.content.toString().substr(4)
+			
+		criaRaid(msg.channel.name,msg.channel.name,msg.content.toString())	
+		//criaRaid(msg.channel.name,msg.content.toString())	
+			
+		//}//fim if
+	    
+    //msg.guild.channels.find("name",msg.channel.name).sendMessage("**Trenadores registados na RAID**\n"+msg.content.toString());
+	
+	}//msg.channel.name
+	
+    
+    
+
+
+
+
+	
+if (msg.channel.name == 'prof-willow-raids-pn') {
+		
+
+	
+ 
 	  
+	  if(msg.content.startsWith("!5")){
+	  
+	
+		  
+		 
+		  
+  //LE A MENSAGEM EXCLUINDO O !
+     var text = msg.content.substring(1);
+ 
+		  var canal='_raid'+text
+		  canal=canal.split('!').join('').toLowerCase();
+		 var nomecanal=canal.split(' ').join('-').toLowerCase();
+	//cria canal
+		  if(msg.guild.channels.find("name", nomecanal  )){
+		  }else{
+			  
+	msg.guild.createChannel(canal, "text");
+			
+	
+		  }	  
+		  
+		//var refcanal=refcanal.concat("#",nomecanal) 
+		 //msg.guild.channels.find("name", canal.split(' ').join('-')).sendMessage("sdfsdfsadfd");	 
+	        
+		 
+		  
+	  
+   text='RAID '+text	  
+	var refcanal="";
+		  
+    
 	  
 	  
 	  
   }   // fim do inicio carater
  
-	  
-	  
-	  
-	  
-	  
-	  //fim marcarcao raid 5
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
     
-      if (msg.content === '!willow') {
+  
+  if (msg.content === '!willow') {
     msg.reply('Olá,\nEu sou o Prof. Willow.\n\n'+
     'E vou ajudar-te a marcar as RAIDS no Pinhal Novo.\n\nAinda estou em desenvolvimento, mas podes sempre falar comigo.\n\n :stuck_out_tongue_winking_eye:');
   }
-  
-	  
-   if (msg.content === '!5') {
-    msg.reply('**\nRAID '+msg.content+'**');
-  }
-  	  
-	  
-if (msg.content === '!mewtwo') {
+
+
+  if (msg.content === '!mewtwo') {
     msg.reply('**\nMEWTWO**\n\nCP 2275 100% sem weather bost\n\nCP 2844 100% IV com weather bost (WINDY)\n\n'+
 	      'Melhores para o combater *Sem focus blast*:\n\n'+
 	     '*Tyranitar*\n'+
@@ -123,15 +196,19 @@ if (msg.content === '!mewtwo') {
 	      '*Dragonite*\n'
 	      
 	     );
-  }	  
-	  
-  }   // fim do inicio carater
- 
-	
+  }
+
+
 	
 		
 	}
 });
+
+
+
+
+
+
 
 
 
