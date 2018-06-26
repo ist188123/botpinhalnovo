@@ -168,10 +168,10 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 		
 			//var mensagem=msg.author.toString()+msg.content.toString().substr(4)
 			
-		//criaRaid(msg.channel.name,msg.channel.name,msg.content.toString())	
+		criaRaid(msg.channel.name,msg.channel.name,msg.content.toString())	
 		//criaRaid(msg.channel.name,msg.content.toString())	
 			
-		}//fim if
+		//}//fim if
 	    
     //msg.guild.channels.find("name",msg.channel.name).sendMessage("**Trenadores registados na RAID**\n"+msg.content.toString());
 	
