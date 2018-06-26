@@ -92,6 +92,55 @@ for (var i=0;i<y.length-1;i++){
 
 
 
+// fim funcao
+function info(titulo){
+	
+	var vinformacao=titulo.split("!")
+	
+	
+   const embed = new Discord.RichEmbed()
+  .setTitle(vinformacao[2])
+  .setAuthor(vinformacao[1], "https://exraidspinhalnovo.webnode.pt/_files/200000024-8e37d8f30a/450/Item_1403-2.png")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x00AE86)
+  .setDescription("")
+  .setFooter("Informação partilhada :", "https://exraidspinhalnovo.webnode.pt/_files/200000023-29ab72ab0f/450/Mewtwo.png")
+ 
+  .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000023-29ab72ab0f/450/Mewtwo.png")
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+  
+  /*
+   * Blank field, useful to create some space.
+   */
+  .addBlankField(true)
+  .addField("INFORMAÇÃO", vinformacao[3], true);
+
+  msg.guild.channels.find("name", "informacao").sendMessage({embed})
+	
+	
+	
+	
+	
+}
+
+
+
+
+if (msg.channel.name == 'adm-pg-pinhalnovo') {
+	
+	 if(msg.content.startsWith("!")){
+	info(msg.content.toString())
+	
+	 }
+	
+}
+
 
 
 
