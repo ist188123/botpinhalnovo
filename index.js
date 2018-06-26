@@ -161,14 +161,14 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 		
 		
 		
-		//if(msg.author.bot) return;
+		if(msg.author.bot) return;
 		
-		if(msg.content.startsWith("@")){
+		//if(msg.content.startsWith("@")){
 	      //  msg.guild.channels.find("name",msg.channel.name).sendMessage("Inserido na RAID :"+msg.author.toString());	
 		
 			//var mensagem=msg.author.toString()+msg.content.toString().substr(4)
 			
-		criaRaid(msg.channel.name,msg.channel.name,msg.content.toString())	
+		//criaRaid(msg.channel.name,msg.channel.name,msg.content.toString())	
 		//criaRaid(msg.channel.name,msg.content.toString())	
 			
 		}//fim if
