@@ -121,7 +121,7 @@ function info(titulo){
   .addBlankField(true)
   .addField("INFORMAÇÃO", vinformacao[3], true);
 
-  msg.guild.channels.find("name", "informacao").sendMessage({embed})
+  msg.guild.channels.find("name", vinformacao[4]).sendMessage({embed})
 	
 	
 	
