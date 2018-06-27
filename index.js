@@ -156,14 +156,14 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 	
 	
 	
-	if (msg.channel.name.startsWith('_raid')) {
+	if (msg.channel.name.startsWith('_r')) {
 		
 		
 		
 		
-		if(msg.author.bot) return;
 		
-		//if(msg.content.startsWith("@")){
+		
+		//if(msg.content.startsWith("")){
 	      //  msg.guild.channels.find("name",msg.channel.name).sendMessage("Inserido na RAID :"+msg.author.toString());	
 		
 			//var mensagem=msg.author.toString()+msg.content.toString().substr(4)
@@ -199,7 +199,7 @@ if (msg.channel.name == 'prof-willow-raids-pn') {
   //LE A MENSAGEM EXCLUINDO O !
      var text = msg.content.substring(1);
  
-		  var canal='_raid'+text
+		  var canal='_r'+text
 		  canal=canal.split('!').join('').toLowerCase();
 		 var nomecanal=canal.split(' ').join('-').toLowerCase();
 	//cria canal
