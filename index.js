@@ -184,7 +184,7 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 
 
 	
-if (msg.channel.name == 'prof-willow-raids-pn') {
+if (msg.channel.name == 'lab-prof-willow') {
 		
 
 	
