@@ -116,7 +116,7 @@ if(vinformacao[4]=='willow'){
    */
   .setColor(0x00AE86)
   .setDescription("")
-  .setFooter("Informação partilhada :", vinformacao[4])
+  .setFooter("Informação partilhada :", quemsou)
  
   .setThumbnail(quemsou)
   /*
