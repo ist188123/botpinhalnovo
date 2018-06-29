@@ -93,9 +93,19 @@ for (var i=0;i<y.length-1;i++){
 
 
 // fim funcao
-function info(titulo,imghttp){
+function info(titulo){
 	
 	var vinformacao=titulo.split("!")
+	var quemsou="https://exraidspinhalnovo.webnode.pt/_files/200000023-29ab72ab0f/450/Mewtwo.png"
+
+
+if(vinformacao[4]=='willow'){
+	
+	quemsou="https://exraidspinhalnovo.webnode.pt/_files/200000025-adf2daee85/450/Pryce.png"
+	
+}
+	
+	
 	
 	
    const embed = new Discord.RichEmbed()
@@ -108,7 +118,7 @@ function info(titulo,imghttp){
   .setDescription("")
   .setFooter("Informação partilhada :", vinformacao[4])
  
-  .setThumbnail(vinformacao[4])
+  .setThumbnail(quemsou)
   /*
    * Takes a Date object, defaults to current date.
    */
