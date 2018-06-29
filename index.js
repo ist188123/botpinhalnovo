@@ -108,7 +108,7 @@ function info(titulo,imghttp){
   .setDescription("")
   .setFooter("Informação partilhada :", imghttp)
  
-  .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000023-29ab72ab0f/450/Mewtwo.png")
+  .setThumbnail(imghttp)
   /*
    * Takes a Date object, defaults to current date.
    */
