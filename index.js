@@ -93,7 +93,7 @@ for (var i=0;i<y.length-1;i++){
 
 
 // fim funcao
-function info(titulo){
+function info(titulo,imghttp){
 	
 	var vinformacao=titulo.split("!")
 	
@@ -106,7 +106,7 @@ function info(titulo){
    */
   .setColor(0x00AE86)
   .setDescription("")
-  .setFooter("Informação partilhada :", "https://exraidspinhalnovo.webnode.pt/_files/200000023-29ab72ab0f/450/Mewtwo.png")
+  .setFooter("Informação partilhada :", imghttp)
  
   .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000023-29ab72ab0f/450/Mewtwo.png")
   /*
