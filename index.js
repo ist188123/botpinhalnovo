@@ -106,9 +106,9 @@ function info(titulo,imghttp){
    */
   .setColor(0x00AE86)
   .setDescription("")
-  .setFooter("Informação partilhada :", imghttp)
+  .setFooter("Informação partilhada :", vinformacao[4])
  
-  .setThumbnail(imghttp)
+  .setThumbnail(vinformacao[4])
   /*
    * Takes a Date object, defaults to current date.
    */
@@ -121,7 +121,7 @@ function info(titulo,imghttp){
   .addBlankField(true)
   .addField("INFORMAÇÃO", vinformacao[3], true);
 
-  msg.guild.channels.find("name", vinformacao[4]).sendMessage({embed})
+  msg.guild.channels.find("name", vinformacao[5]).sendMessage({embed})
 	
 	
 	
