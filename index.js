@@ -157,7 +157,7 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 	
 	
 	
-	if (msg.channel.name.startsWith('_r')) {
+	if (msg.channel.name.startsWith('_raid')) {
 		
 		
 		
@@ -200,7 +200,7 @@ if (msg.channel.name == 'lab-prof-willow') {
   //LE A MENSAGEM EXCLUINDO O !
      var text = msg.content.substring(1);
  
-		  var canal='_r'+text
+		  var canal='_raid'+text
 		  canal=canal.split('!').join('').toLowerCase();
 		 var nomecanal=canal.split(' ').join('-').toLowerCase();
 	//cria canal
