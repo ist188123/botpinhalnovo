@@ -37,14 +37,33 @@ for (var i=0;i<y.length-1;i++){
 
 	//--tipos raid
 	
-	var status="";
-	var cpiv=""
+	var status="?";
+	var cpiv="?"
 	
-	var ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
+	var ovo="";
 	var braid=ovo;
 	var bicho="";
 	
 	 //----  
+	
+	
+	 //-----   
+	if(tiporaid.startsWith('3')){
+        ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
+      
+		braid=ovo;   
+		
+		//bicho
+	if(bicho.startsWith('machamp')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000031-dcf97ddeea/450/pokemon_icon_068_00.png";
+       }     
+	}   
+	//----     
+	    
+	
+	
+	
+	
      if(tiporaid.startsWith('4')){
         ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
        
@@ -60,7 +79,22 @@ for (var i=0;i<y.length-1;i++){
      } //----  
 	
 	
-	
+	 //------
+	if(tiporaid.startsWith('5')){
+        ovo=ovo;
+       
+        braid=ovo;    
+	    
+	  if(braid.startsWith('ohoh')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000026-5ec255fb74/450/Ho-Oh.png";
+       }
+	    
+	    
+      if(braid.startsWith('articune')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000030-050b3060a3/450/articune.png";
+       }   
+	     
+	}//----    
 	
 	
 	
@@ -73,7 +107,7 @@ for (var i=0;i<y.length-1;i++){
 	
    const embed = new Discord.RichEmbed()
    .setTitle(horas)
-  .setAuthor(local.toUpperCase(), "https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png")
+  .setAuthor(local.toUpperCase(), ovo)
   
    /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
@@ -82,13 +116,13 @@ for (var i=0;i<y.length-1;i++){
   .setDescription("")
   .setFooter("Equipa: PKG Pinhal Novo, pubicado :", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
  // .setImage("http://i.imgur.com/yVpymuV.png")
-  .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png")
+  .setThumbnail(braid)
   /*
    * Takes a Date object, defaults to current date.
    */
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-  .addField("Niveis CP", "1682 - 1764 / 2103-2205 Nuvens(cloudy)\n\n")
+  .addField("Niveis CP", cpiv)
   /*
    * lista dos jogadores que vão RAID.
    */
@@ -98,15 +132,7 @@ for (var i=0;i<y.length-1;i++){
    */
    
   .addBlankField(true)
-  .addField("\n\n\n\n\n\Fraco contra:", "Entei (Fire Spin/Overheat)\n" +
-"Moltres (Fire Spin/Overheat)\n" +
-"Charizard (Fire Spin/Blast Burn)\n" +
-"Flareon (Fire Spin/Overheat)\n" +
-"Ho-Oh (Steel Wing/Fire Blast)\n" +
-"Machamp (Counter/Dynamic Punch)\n" +
-"Tyranitar (Smack Down/Stone Edge)\n" +
-"Blaziken (Counter/Overheat)\n" +
-"Breloom (Counter/Dynamic Punch)"
+  .addField(status
 , true);  
    msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({embed});	  
 	
@@ -223,7 +249,7 @@ if (msg.channel.name == 'lab-prof-willow') {
 	
  
 	  
-	  if(msg.content.startsWith("!5") || msg.content.startsWith("!4")){
+	  if(msg.content.startsWith("!5") || msg.content.startsWith("!4")|| msg.content.startsWith("!3")){
 	  
 	
 		  
