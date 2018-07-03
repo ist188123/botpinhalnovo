@@ -205,7 +205,7 @@ if (msg.channel.name == 'lab-prof-willow') {
 	
  
 	  
-	  if(msg.content.startsWith("!5")){
+	  if(msg.content.startsWith("!5") || msg.content.startsWith("!4")){
 	  
 	
 		  
