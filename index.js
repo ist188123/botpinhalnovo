@@ -81,7 +81,7 @@ for (var i=0;i<y.length-1;i++){
 	
 	 //------
 	if(tiporaid.startsWith('5')){
-        ovo=ovo;
+        ovo="https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png";
        
         braid=ovo;    
 	    
