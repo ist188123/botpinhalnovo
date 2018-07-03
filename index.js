@@ -41,7 +41,7 @@ for (var i=0;i<y.length-1;i++){
 	var cpiv=""
 	
 	var ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
-	var braid="";
+	var braid=ovo;
 	var bicho="";
 	
 	 //----  
@@ -88,8 +88,7 @@ for (var i=0;i<y.length-1;i++){
    */
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-  .addField("Niveis CP",
-   status, true);  
+  .addField("Niveis CP", status, true);  
    msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({embed});	  
 	
 
