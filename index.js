@@ -23,6 +23,7 @@ function criaRaid(ncanal,text,treinador){
   //inicio mensagem
 	//var totaltreinadores=treinador.trim().split("@")
 	//"!raid5 piscina !12h30".substring(1)
+	                var tiporaid=ncanal.substr(5);
 			var titulo="RAID 5 "+ncanal.substr(7)
 			var thoras=titulo.split("-")
 			var horas=thoras[thoras.length-1]
@@ -34,6 +35,37 @@ for (var i=0;i<y.length-1;i++){
    
 }
 
+	//--tipos raid
+	
+	var status="";
+	var cpiv=""
+	
+	var ovo="";
+	var braid="";
+	var bicho="";
+	
+	 //----  
+     if(tiporaid.startsWith('4')){
+        ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
+       
+        braid=ovo;
+     
+     if(bicho.startsWith('absol')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png";
+       }      
+	      
+	 if(bicho.startsWith('tyra')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000029-e0378e12f0/450/tyra.png";
+       } 
+     } //----  
+	
+	
+	
+	
+	
+	
+	//--fim tipo raid
+	
 	
 	 msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage("Utilize o canal para registo "+msg.guild.channels.find("name", msg.channel.name));	  
 	
@@ -41,41 +73,23 @@ for (var i=0;i<y.length-1;i++){
 	
    const embed = new Discord.RichEmbed()
    .setTitle(horas)
-  .setAuthor(local.toUpperCase(), "https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png")
+  .setAuthor(local.toUpperCase(), ovo)
   
    /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor(0x00AE86)
   .setDescription("")
-  .setFooter("PG pinhal novo, pubicado :", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+  .setFooter("Equipa: PKG Pinhal Novo, pubicado :", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
  // .setImage("http://i.imgur.com/yVpymuV.png")
-  .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png")
+  .setThumbnail(braid)
   /*
    * Takes a Date object, defaults to current date.
    */
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
   .addField("Niveis CP",
-   "1682 - 1764 / 2103-2205 Nuvens(cloudy)\n\n")
-  /*
-   * lista dos jogadores que vão RAID.
-   */
-  .addField("Treinadores:",treinador , true)
-  /*
-   * Blank field, useful to create some space.
-   */
-   
-  .addBlankField(true)
-  .addField("\n\n\n\n\n\Fraco contra:", "Entei (Fire Spin/Overheat)\n" +
-"Moltres (Fire Spin/Overheat)\n" +
-"Charizard (Fire Spin/Blast Burn)\n" +
-"Flareon (Fire Spin/Overheat)\n" +
-"Ho-Oh (Steel Wing/Fire Blast)\n" +
-"Machamp (Counter/Dynamic Punch)\n" +
-"Tyranitar (Smack Down/Stone Edge)\n" +
-"Blaziken (Counter/Overheat)\n" +
-"Breloom (Counter/Dynamic Punch)", true);  
+   status, true);  
    msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({embed});	  
 	
 
