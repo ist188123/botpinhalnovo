@@ -40,7 +40,7 @@ for (var i=0;i<y.length-1;i++){
 	var status="";
 	var cpiv=""
 	
-	var ovo="";
+	var ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
 	var braid="";
 	var bicho="";
 	
