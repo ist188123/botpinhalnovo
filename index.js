@@ -73,7 +73,7 @@ for (var i=0;i<y.length-1;i++){
 	
    const embed = new Discord.RichEmbed()
    .setTitle(horas)
-  .setAuthor(local.toUpperCase(), ovo)
+  .setAuthor(local.toUpperCase(), "https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png")
   
    /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
@@ -82,13 +82,32 @@ for (var i=0;i<y.length-1;i++){
   .setDescription("")
   .setFooter("Equipa: PKG Pinhal Novo, pubicado :", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
  // .setImage("http://i.imgur.com/yVpymuV.png")
-  .setThumbnail(braid)
+  .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png")
   /*
    * Takes a Date object, defaults to current date.
    */
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-  .addField("Niveis CP", status, true);  
+  .addField("Niveis CP", "1682 - 1764 / 2103-2205 Nuvens(cloudy)\n\n")
+  /*
+   * lista dos jogadores que vão RAID.
+   */
+  .addField("Treinadores:",treinador , true)
+  /*
+   * Blank field, useful to create some space.
+   */
+   
+  .addBlankField(true)
+  .addField("\n\n\n\n\n\Fraco contra:", "Entei (Fire Spin/Overheat)\n" +
+"Moltres (Fire Spin/Overheat)\n" +
+"Charizard (Fire Spin/Blast Burn)\n" +
+"Flareon (Fire Spin/Overheat)\n" +
+"Ho-Oh (Steel Wing/Fire Blast)\n" +
+"Machamp (Counter/Dynamic Punch)\n" +
+"Tyranitar (Smack Down/Stone Edge)\n" +
+"Blaziken (Counter/Overheat)\n" +
+"Breloom (Counter/Dynamic Punch)"
+, true);  
    msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({embed});	  
 	
 
