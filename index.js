@@ -23,6 +23,26 @@ function criaRaid(ncanal,text,treinador){
   //inicio mensagem
 	//var totaltreinadores=treinador.trim().split("@")
 	//"!raid5 piscina !12h30".substring(1)
+	
+	
+	var status="?";
+	var cpiv="?"
+	
+	var ovo="";
+	var braid=ovo;
+	var bicho="";
+	
+	
+	
+	if(treinador.startsWith('%')){
+      bicho=treinador.substring(1,treinador.indexOf(' '));
+      treinador=treinador.substr(treinador.indexOf(' ')+1);
+      
+ 
+ }
+	
+	
+	
 	                var tiporaid=ncanal.substring(5,6);
 			var titulo="RAID "+ncanal.substr(5)
 			var thoras=titulo.split("-")
@@ -37,12 +57,6 @@ for (var i=0;i<y.length-1;i++){
 
 	//--tipos raid
 	
-	var status="?";
-	var cpiv="?"
-	
-	var ovo="";
-	var braid=ovo;
-	var bicho="";
 	
 	 //----  
 	
