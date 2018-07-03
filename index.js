@@ -86,6 +86,7 @@ for (var i=0;i<y.length-1;i++){
      
      if(bicho.startsWith('absol')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png";
+	     cpiv="1232-1303/1540-1629"
        }      
 	      
 	 if(bicho.startsWith('tyra')){
