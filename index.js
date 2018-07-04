@@ -86,7 +86,7 @@ for (var i=0;i<y.length-1;i++){
      
      if(bicho.startsWith('absol')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png";
-	     cpiv="1232-1303/1540-1629"
+	     cpiv="1232-1303/1540-1629";
        }      
 	      
 	 if(bicho.startsWith('tyra')){
@@ -100,6 +100,12 @@ for (var i=0;i<y.length-1;i++){
         ovo="https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png";
        
         braid=ovo;    
+		
+	if(braid.startsWith('regice')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png";
+	cpiv="1682-1764 / 2103-2205";
+		status="ENTEI\nMOLTRES\nCHARIZARD\nFLAREON\nHO-oh";
+       }	
 	    
 	  if(braid.startsWith('ohoh')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000026-5ec255fb74/450/Ho-Oh.png";
