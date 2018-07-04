@@ -214,10 +214,10 @@ function info(titulo){
 
 if (msg.channel.name == 'adm-pg-pinhalnovo') {
 	msg.replay("entrar");
-	 if(msg.content.startsWith("!")){
-	info(msg.content.toString());
+	 //if(msg.content.startsWith("!")){
+	//info(msg.content.toString());
 	
-	 }
+	 //}
 
 if(msg.content.startsWith('%') || msg.content.startsWith('@')){
 	
