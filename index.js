@@ -213,7 +213,7 @@ function info(titulo){
 
 
 if (msg.channel.name == 'adm-pg-pinhalnovo') {
-	msg.replay('entrar');
+	msg.replay("entrar");
 	 if(msg.content.startsWith("!")){
 	info(msg.content.toString());
 	
@@ -221,7 +221,7 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 
 if(msg.content.startsWith('%') || msg.content.startsWith('@')){
 	
-	msg.replay('passou');
+	msg.replay("passou");
 }
 	
 }
