@@ -213,15 +213,15 @@ function info(titulo){
 
 
 if (msg.channel.name == 'adm-pg-pinhalnovo') {
-	
+	msg.replay('entrar');
 	 if(msg.content.startsWith("!")){
-	info(msg.content.toString())
+	info(msg.content.toString());
 	
 	 }
 
-if(msg.content.startsWith("%") || msg.content.startsWith("@")){
+if(msg.content.startsWith('%') || msg.content.startsWith('@')){
 	
-	msg.replay("oi");
+	msg.replay('passou');
 }
 	
 }
