@@ -218,6 +218,11 @@ if (msg.channel.name == 'adm-pg-pinhalnovo') {
 	info(msg.content.toString())
 	
 	 }
+
+if(msg.content.startsWith("%") || msg.content.startsWith("@")){
+	
+	msg.replay("oi");
+}
 	
 }
 
