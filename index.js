@@ -15,6 +15,45 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
+//apagar mensagens
+	if (msg.content =="!apagamsg") {
+
+      
+
+      if (!msg.channel.permissionsFor(msg.author).hasPermission("MANAGE_MESSAGES")) {
+        msg.channel.sendMessage("Sorry, you don't have the permission to execute the command \""+msg.content+"\"");
+        console.log("Sorry, you don't have the permission to execute the command \""+msg.content+"\"");
+        return;
+      } else if (!msg.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+        msg.channel.sendMessage("Sorry, I don't have the permission to execute the command \""+msg.content+"\"");
+        console.log("Sorry, I don't have the permission to execute the command \""+msg.content+"\"");
+        return;
+      }
+  
+     
+      // Only delete messages if the channel type is TextChannel
+      // DO NOT delete messages in DM Channel or Group DM Channel
+      if (msg.channel.type == 'text') {
+        msg.channel.fetchMessages()
+          .then(messages => {
+          msg.channel.bulkDelete(messages);
+       
+            messagesDeleted = messages.array().length; // number of messages deleted
+
+            // Logging the number of messages deleted on both the channel and console.
+            msg.channel.sendMessage("Deletion of messages successful. Total messages deleted: "+messages.author.toString());
+            console.log('Deletion of messages successful. Total messages deleted: '+messagesDeleted)
+          })
+          .catch(err => {
+            console.log('Error while doing Bulk Delete');
+            console.log(err);
+          });
+      }
+    }
+ 
+	
+	
+//fim apagar mensagens	
 
 //funcao
 
