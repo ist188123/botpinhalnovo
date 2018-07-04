@@ -101,18 +101,18 @@ for (var i=0;i<y.length-1;i++){
        
         braid=ovo;    
 		
-	if(braid.startsWith('regice')){
+	if(bicho.startsWith('regice')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png";
 	cpiv="1682-1764 / 2103-2205";
 		status="ENTEI\nMOLTRES\nCHARIZARD\nFLAREON\nHO-oh";
        }	
 	    
-	  if(braid.startsWith('ohoh')){
+	  if(bicho.startsWith('ohoh')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000026-5ec255fb74/450/Ho-Oh.png";
        }
 	    
 	    
-      if(braid.startsWith('articune')){
+      if(bicho.startsWith('articune')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000030-050b3060a3/450/articune.png";
        }   
 	     
