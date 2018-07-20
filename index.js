@@ -140,6 +140,22 @@ for (var i=0;i<y.length-1;i++){
        
         braid=ovo;    
 		
+		
+	
+	
+	if(bicho.startsWith('registeel')){
+         braid="https://exraidspinhalnovo.webnode.pt/_files/200000034-582b759252/450/regitel-0.png";
+	cpiv="1222-1292 / 1528-1615";
+		status="Charizard with Overheat\n"+
+"Blaziken with FIRE / FIGHTING moveset\n"+
+"Typhlosion with Overheat\n"+
+"Arcanine with Flamethrower\n"+
+"Salamance with Fire Fang/Fire Blast\n"+
+"Heracross with Counter/Close Combat\n";
+       }	
+		
+		
+		
 	if(bicho.startsWith('regice')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png";
 	cpiv="1682-1764 / 2103-2205";
