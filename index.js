@@ -146,12 +146,7 @@ for (var i=0;i<y.length-1;i++){
 	if(bicho.startsWith('registeel')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000034-582b759252/450/regitel-0.png";
 	cpiv="1222-1292 / 1528-1615";
-		status="Charizard with Overheat\n"+
-"Blaziken with FIRE / FIGHTING moveset\n"+
-"Typhlosion with Overheat\n"+
-"Arcanine with Flamethrower\n"+
-"Salamance with Fire Fang/Fire Blast\n"+
-"Heracross with Counter/Close Combat\n";
+		status="Charizard with Overheat\nBlaziken FIRE\nTyphlosion - Overheat\nArcanine - Flamethrower\nSalamance - Fire Fang - Fire Blast\nHeracross - Combat\n";
        }	
 		
 		
