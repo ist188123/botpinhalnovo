@@ -91,7 +91,15 @@ for (var i=0;i<y.length-1;i++){
         ovo="https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
        
         braid=ovo;
-     
+    
+	     
+	if(bicho.startsWith('golem')){
+         braid=" https://exraidspinhalnovo.webnode.pt/_files/200000037-85af786acf/450/golem.png";
+	     cpiv="Nivel 20 CP 1666";
+	    status="Duplo fraco contra WATER e GRASS\nKyogre Waterfall - Hydro Pump\nGyarados Waterfall - Hydro Pump\nGroudon Mud Shot - Solar Beam"
+       }     
+	     
+	     
      if(bicho.startsWith('absol')){
          braid="https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png";
 	     cpiv="1232-1303/1540-1629";
