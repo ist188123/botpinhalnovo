@@ -363,7 +363,7 @@ client.on("message", async (msg) => {
 
             //----  FIM TIPO RAID ---
 
-msg.reply("-");
+
             disparaRaid(local, horas, canalRaid, adicional, participantesRaid, ovo, braid, cpiv, status, adicional);
             //  msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage(msg.guild.channels.find("name", msg.channel.name)+"\n"+membersWithRole.join("\n"));
 
@@ -384,7 +384,7 @@ msg.reply("-");
 
     function disparaRaid(local, horas, canal, treinadores, total, ovo, bicho, cpiv, status, adicional) {
 
-
+msg.reply("1");
         const embed = new Discord.RichEmbed()
             .setTitle(horas)
             .setAuthor(local.toUpperCase(), ovo)
@@ -415,7 +415,7 @@ msg.reply("-");
 
             .addBlankField(true)
             .addField("\n\n\n\n\n\Fraco contra:", status, true);
-
+msg.reply("2");
         msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({ embed });
 
 
