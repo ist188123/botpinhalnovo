@@ -363,7 +363,7 @@ client.on("message", async (msg) => {
 
             //----  FIM TIPO RAID ---
 
-
+msg.reply("-");
             disparaRaid(local, horas, canalRaid, adicional, participantesRaid, ovo, braid, cpiv, status, adicional);
             //  msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage(msg.guild.channels.find("name", msg.channel.name)+"\n"+membersWithRole.join("\n"));
 
