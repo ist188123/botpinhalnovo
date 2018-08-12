@@ -207,7 +207,7 @@ client.on("message", async (msg) => {
                 var qtatr = result.filter(item => item !== autor).length
 
 
-                msg.channel.send("result 2"+result);            
+                //msg.channel.send("result 2"+result);            
 
                 //--------------------------------------               
 
@@ -384,7 +384,7 @@ client.on("message", async (msg) => {
 
     function disparaRaid(local, horas, canal, treinadores, total, ovo, bicho, cpiv, status, adicional) {
 
-msg.reply(local+ horas+ canal+treinadores);
+
         const embed = new Discord.RichEmbed()
             .setTitle(horas)
             .setAuthor(local.toUpperCase(), ovo)
@@ -415,7 +415,7 @@ msg.reply(local+ horas+ canal+treinadores);
 
             .addBlankField(true)
             .addField("\n\n\n\n\n\Fraco contra:", status, true);
-msg.reply("2");
+
         msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({ embed });
 
 
