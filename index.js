@@ -207,7 +207,7 @@ client.on("message", async (msg) => {
                 var qtatr = result.filter(item => item !== autor).length
 
 
-                //msg.channel.send("result 2"+result);            
+                msg.channel.send("result 2"+result);            
 
                 //--------------------------------------               
 
