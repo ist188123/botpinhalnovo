@@ -415,8 +415,8 @@ client.on("message", async (msg) => {
 
             .addBlankField(true)
             .addField("\n\n\n\n\n\Fraco contra:", status, true);
-  msg.guild.channels.find("name", "x").sendMessage({ embed });
-      //  msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({ embed });
+
+        msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({ embed });
 
 
     }
