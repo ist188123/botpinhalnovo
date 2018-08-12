@@ -19,9 +19,9 @@ client.on("message", async (msg) => {
     let adicional = "";
 
 
-    let team_mystic = msg.guild.roles.find("name", "MYSTIC");
+    let team_mystic = msg.guild.roles.find("name", "TEAM MYSTIC");
     let team_valor = msg.guild.roles.find("name", "TEAM VALOR");
-    let team_instinct = msg.guild.roles.find("name", "INSTINCT");
+    let team_instinct = msg.guild.roles.find("name", "TEAM INSTINCT");
 
     //imagens equipas
     let team_imagem = "";
