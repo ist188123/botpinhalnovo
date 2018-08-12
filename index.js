@@ -384,7 +384,7 @@ client.on("message", async (msg) => {
 
     function disparaRaid(local, horas, canal, treinadores, total, ovo, bicho, cpiv, status, adicional) {
 
-msg.reply(local+ horas+ canal+treinadores+total);
+msg.reply(local+ horas+ canal+treinadores);
         const embed = new Discord.RichEmbed()
             .setTitle(horas)
             .setAuthor(local.toUpperCase(), ovo)
