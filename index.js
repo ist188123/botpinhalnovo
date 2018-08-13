@@ -461,7 +461,7 @@ function apagacanal(arg){
 
             }
 
-                setTimeout(apagacanal, 90000, nomecanal);
+                setTimeout(apagacanal, 4680000, nomecanal);
                 setTimeout(myFunc, 1500, nomecanal);
 
         }   // fim do inicio carater
