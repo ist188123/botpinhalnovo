@@ -108,7 +108,7 @@ function apagacanal(arg){
 
 
 
-        if (msg.content.startsWith('👍') || msg.content.startsWith('->') || msg.content.startsWith('%')) {
+        if (msg.content.startsWith('👍') || msg.content.startsWith(':+1:') || msg.content.startsWith('->') || msg.content.startsWith('%')) {
 
             let raidcanal = msg.channel.name;
 
