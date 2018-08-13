@@ -49,7 +49,7 @@ client.on("message", async (msg) => {
 
 
 function myFunc(arg) {
-        msg.guild.channels.find("name", arg).sendMessage("Olá Treinadores.\nEste canal é temporário se será apagado dentro de 60 minutos.");
+        msg.guild.channels.find("name", arg).sendMessage("Olá Treinadores.\nEste canal é temporário se será apagado dentro em 1 Hora e 30 minutos.");
     }
 
     
