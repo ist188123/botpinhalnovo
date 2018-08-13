@@ -48,11 +48,19 @@ client.on("message", async (msg) => {
     //---------------------------------------------------		
 
 
-
-    function myFunc(arg) {
-        msg.guild.channels.find("name", arg).sendMessage("oi");
+function myFunc(arg) {
+        msg.guild.channels.find("name", arg).sendMessage("Olá Treinadores.\nEste canal é temporário se será apagado dentro de 60 minutos.");
     }
 
+    
+    
+function apagacanal(arg){
+   // setTimeout(function () {
+                msg.guild.channels.find("name",arg).delete();
+                
+     //     }, 20000);
+  
+}
 
 
 
@@ -453,7 +461,8 @@ client.on("message", async (msg) => {
 
             }
 
-
+                setTimeout(apagacanal, 6300000, nomecanal);
+                setTimeout(myFunc, 1500, nomecanal);
 
         }   // fim do inicio carater
 
