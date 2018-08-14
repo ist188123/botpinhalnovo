@@ -493,7 +493,7 @@ let cor="0x00AE86";
 
       }
 
-      setTimeout(apagacanal, 4680000, nomecanal);
+      setTimeout(apagacanal, 4080000, nomecanal);
       setTimeout(myFunc, 1500, nomecanal);
 
     }   // fim do inicio carater
