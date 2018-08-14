@@ -9,7 +9,7 @@ const prefix = "+";
 
 
 client.on("message", async (msg) => {
-    let mewtwo="nao";
+    let mewtwo="";
 
     let mais = "";
     let autor = ""
@@ -405,7 +405,7 @@ function apagacanal(arg){
             if(sponser!="nao"){
                
                 ovo=sponser;
-               
+               horas=horas+sponser
             }  
             //----  FIM TIPO RAID ---
 
