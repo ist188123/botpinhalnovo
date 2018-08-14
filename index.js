@@ -359,7 +359,7 @@ let cor="0x00AE86";
 
         if (bicho.startsWith('regirock')) {
           braid = "https://exraidspinhalnovo.webnode.pt/_files/200000039-889a38996c/450/regirock-2.png";
-          cpiv = "**BOSS CP** : 41777\n**CP** N20 1764 N25 2205\n";
+          cpiv = "**BOSS CP** : 41777\n**CP** 1764 <:forrado:478895508706820126> 2205\n";
           status = "<:luta:478587139756392448><:ground:478587230168809477><:agua:478587230730846210><:steel:478587109725306880>\n" +
             "Kyogre Waterfall-Hydro Pump\n" +
             "Groudon Mud Shot - Solar Beam \n" +
