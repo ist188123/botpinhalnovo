@@ -368,6 +368,27 @@ client.on("message", async (msg) => {
                     cpiv = "1574-1967 1650-2063"
                     status = "<:psiquico:478587230483513346><:voador:478587231259590676><:fada:478587230814863372>\nAlakazam: Futuresight(33.00)\nEspeon: Futuresight(35.60)\nExeggutor: Confusion(30.10)\nCharizard: Overheat(32.20)\nDragonite: Dragon Hurricane(33.95)";
                 }
+                
+                
+                if (bicho.startsWith('piloswine')) {
+    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000041-e63f3e7363/450/poliswine.png";
+    cpiv = "**BOSS CP** : 13663\n**CP** 1305 <:sol:478895508413349910> <:gelo:478587230164615174> 1631\n";
+    status = "<:fogo:478587230747754543> <:luta:478587139756392448> <:erva:478587230814994432> " +
+        "<:steel:478587109725306880> <:steel:478587109725306880>\n" +
+        "ENTEI\n " +
+        "Fire Fang - Overheat \n" +
+        "Kyogre\n" +
+        "Waterfall -	Hydro Pump \n" +
+        "Moltres\n" +
+        "Fire Spin -	Overheat \n" +
+        "Machamp\n" +
+        "Counter - Dynamic Punch \n";
+    
+}
+                
+                
+                
+                
             }
             //----     
 
