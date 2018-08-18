@@ -408,7 +408,7 @@ if (bicho.startsWith('rhydon')) {
     cpiv = "**BOSS CP** : 30512\n**CP** 1886 <:sol:478895508413349910> <:nevoeiro:478895508551761930> 2357\n";
     status = "<:chuva:478895508673527808> <:sol:478895508413349910> " +
     "Kyogre\n"+
-    "Waterfall	Hydro Pump WATER\n	"+
+    "Waterfall	Hydro Pump \n	"+
     "Venusaur\n"+
     "Vine Whip -	Frenzy Plant\n "+
     "Poliwrath\n"+
