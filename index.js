@@ -400,6 +400,28 @@ client.on("message", async (msg) => {
 
                 braid = ovo;
 
+                
+                
+                
+if (bicho.startsWith('rhydon')) {
+    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png";
+    cpiv = "**BOSS CP** : 30512\n**CP** 1886 <:sol:478895508413349910> <:nevoeiro:478895508551761930> 2357\n";
+    status = "<:chuva:478895508673527808> <:sol:478895508413349910> " +
+    "Kyogre\n"+
+    "Waterfall	Hydro Pump WATER\n	"+
+    "Venusaur\n"+
+    "Vine Whip -	Frenzy Plant\n "+
+    "Poliwrath\n"+
+    "Bubble -	Hydro Pump\n "+
+    "Gyarados\n"+
+    "Waterfall -	Hydro Pump \n	"+
+    "Exeggutor\n"+
+    "Bullet Seed -	Solar Beam ";
+}
+
+                
+                
+                
                 if (bicho.startsWith('hundoom')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000040-1e1dc1f153/450/houndoom.png";
                     cpiv = "**BOSS CP** : 2730220\n**CP** 1445 <:nevoeiro:478895508551761930><:sol:478895508413349910>2529\n";
