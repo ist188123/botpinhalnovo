@@ -591,10 +591,10 @@ if (bicho.startsWith('rhydon')) {
             canal = canal.split('!').join('').toLowerCase();
             var nomecanal = canal.split(' ').join('-').toLowerCase();
              nomecanal = nomecanal.replace('--', '-');
-            //cria canal
+           msg.reply(nomecanal);
             if (msg.guild.channels.find("name", nomecanal)) {
             } else {
-
+             msg.reply(nomecanal);
                 msg.guild.createChannel(nomecanal, "text");
 
 
