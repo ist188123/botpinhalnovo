@@ -58,12 +58,24 @@ client.on("message", async (msg) => {
     //fim informacao
     //---------------------------------------------------		
 
+    
+    function horaCanal(offset) {
+var d = new Date();
+
+var sunriseMills = d.getTime() + (d.getTimezoneOffset() * 60000);;        
+
+return textTime = new Date(sunriseMills+(3600000*offset)) 
+   .toLocaleTimeString( { hour: 'numeric', minute: 'numeric' });
+}
 
 
     function myFunc(arg) {
-        msg.guild.channels.find("name", arg).sendMessage("Olá Treinadores.\nEste canal é temporário se será apagado dentro em 1 Hora e 30 minutos.");
+        
+        
+        msg.guild.channels.find("name", arg).sendMessage("Olá Treinadores.\nEste canal é temporário e será apagado às : "+horaCanal('+2.5'));
     }
 
+   
 
 
     function apagacanal(arg) {
