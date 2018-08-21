@@ -646,17 +646,16 @@ client.on("message", async (msg) => {
             var text=text.replace(/[`~@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
             text=text.replace(/\s\s+/g, ' ');;
            
-            msg.reply(text)
-            msg.reply(text)
+            
             
             var canal = '_raid' + text
             
             canal = canal.split('!').join('').toLowerCase();
             var nomecanal = canal.split(' ').join('-').toLowerCase();
-             msg.reply(nomecanal); 
+            // msg.reply(nomecanal); 
             nomecanal = nomecanal.replace(/--/gi, '-');
             
-            msg.reply(nomecanal); 
+            //msg.reply(nomecanal); 
             if (msg.guild.channels.find("name", nomecanal)) {
             } else {
 
