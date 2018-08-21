@@ -18,7 +18,7 @@ client.on("message", async (msg) => {
     var regra = "Mod"
     let pkmraid = "Desconhecido";
     let adicional = "";
-
+    
 
     let team_mystic = msg.guild.roles.find("name", "TEAM MYSTIC");
     let team_valor = msg.guild.roles.find("name", "TEAM VALOR");
@@ -58,38 +58,40 @@ client.on("message", async (msg) => {
     //fim informacao
     //---------------------------------------------------		
 
-    
+
     function horaCanal(offset) {
-var d = new Date();
+        var d = new Date();
 
-var sunriseMills = d.getTime() + (d.getTimezoneOffset() * 60000);;        
+        var sunriseMills = d.getTime() + (d.getTimezoneOffset() * 60000);;
 
-return textTime = new Date(sunriseMills+(3600000*offset)) 
-   .toLocaleTimeString( { hour: 'numeric', minute: 'numeric' });
-}
+        return textTime = new Date(sunriseMills + (3600000 * offset))
+            .toLocaleTimeString({ hour: 'numeric', minute: 'numeric' });
+    }
 
 
     function myFunc(arg) {
-        
-       
-    msg.guild.channels.find("name", arg).sendMessage({embed: {
-    color: 16580627,
-   title: "Olá Treinadores\nEste canal é temporário e será apagado às "+horaCanal('+2.5'),
-    description:"Para mais informação consultar "+msg.guild.channels.find("name", "willow-tutorial"),
-      
-   
-    timestamp: new Date(),
-    footer: {
-      icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
-      text: "Equipa - PKG Pinhal Novo,"
-    }
- 
- }});    
-    
-    
+
+
+        msg.guild.channels.find("name", arg).sendMessage({
+            embed: {
+                color: 16580627,
+                title: "Olá Treinadores\nEste canal é temporário e será apagado às " + horaCanal('+2.5'),
+                description: "Para mais informação consultar " + msg.guild.channels.find("name", "willow-tutorial"),
+
+
+                timestamp: new Date(),
+                footer: {
+                    icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
+                    text: "Equipa - PKG Pinhal Novo,"
+                }
+
+            }
+        });
+
+
     }
 
-   
+
 
 
     function apagacanal(arg) {
@@ -156,11 +158,11 @@ return textTime = new Date(sunriseMills+(3600000*offset))
 
         //++++
 
-     
-        
-        
-        
-        
+
+
+
+
+
 
         //-------------------------------------------
         if (msg.content.startsWith('👍') || msg.content.startsWith(':+1:') || msg.content.startsWith('->') || msg.content.startsWith('%') || msg.content.startsWith('!exraid')) {
@@ -169,160 +171,160 @@ return textTime = new Date(sunriseMills+(3600000*offset))
             //paga todas as mensagens do canal
             delmsgdocanal("raids-pinhal-novo");
 
-           
+
 
             //-----
             //le os canais que das raids _raids
-            let raidcanal="";
+            let raidcanal = "";
             const listedChannels = [];
             msg.guild.channels.forEach(channel => {
 
                 if (channel.name.startsWith('_raid')) {
                     listedChannels.push(channel.name);
-                 
-
-           
-
-              //  msg.reply("aqui 2"+channel.name);
-
-
-                raidcanal = msg.guild.channels.find("name", channel.name);
 
 
 
 
-                //-----
-
-                //pelo teste  let raidcanal = msg.channel.name;
+                    //  msg.reply("aqui 2"+channel.name);
 
 
-
-               var array = [];
-                
-                adicional = "";
-                mewtwo="";
-               pkmraid="";
-
-
-
-                //--------------------------------
-                //le todas as mensagens do canal
-                //------------------------
-                msg.guild.channels.find("name", channel.name).fetchMessages({ limit: 100 }).then(msg => {
-                    msg.forEach(msg => {
-
-                  //  msg.reply("aqui 3"+channel.name);
-
-                        //msg inicia com %
-                        if (msg.content.startsWith('%')) {
-                            pkmraid = msg.content.substring(1);
-                            array.push(msg.content);
-                            //  msg.channel.send(pkmraid);
-                        }
-
-                        if (msg.content.startsWith('!exraid')) {
-                            mewtwo = msg.content.substring(1);
-                            array.push(msg.content);
-                        }
+                    raidcanal = msg.guild.channels.find("name", channel.name);
 
 
 
 
-                        //msg inicia com    
-                        if (msg.content.startsWith('👍')) {
+                    //-----
+
+                    //pelo teste  let raidcanal = msg.channel.name;
 
 
 
+                    var array = [];
+
+                    adicional = "";
+                    mewtwo = "";
+                    pkmraid = "";
 
 
-                            if (msg.member.roles.has(team_valor.id)) {
-                                team_imagem = valor.toString();
-                                // msg.reply(team_imagem);
-                                quantidade++;
-                                array.push(team_imagem + " " + msg.author + " " + msg.content.substring(2));
-                                adicional = adicional + team_imagem + " " + msg.author + " " + msg.content.substring(2) + "\n";
+
+                    //--------------------------------
+                    //le todas as mensagens do canal
+                    //------------------------
+                    msg.guild.channels.find("name", channel.name).fetchMessages({ limit: 100 }).then(msg => {
+                        msg.forEach(msg => {
+
+                            //  msg.reply("aqui 3"+channel.name);
+
+                            //msg inicia com %
+                            if (msg.content.startsWith('%')) {
+                                pkmraid = msg.content.substring(1);
+                                array.push(msg.content);
+                                //  msg.channel.send(pkmraid);
                             }
 
-                            if (msg.member.roles.has(team_mystic.id)) {
-                                team_imagem = mystic.toString();
-                                // msg.reply(team_imagem);
-                                quantidade++;
-                                array.push(team_imagem + " " + msg.author + " " + msg.content.substring(2));
-                                adicional = adicional + team_imagem + " " + msg.author + " " + msg.content.substring(2) + "\n";
+                            if (msg.content.startsWith('!exraid')) {
+                                mewtwo = msg.content.substring(1);
+                                array.push(msg.content);
                             }
 
-                            if (msg.member.roles.has(team_instinct.id)) {
-                                team_imagem = instinct.toString();
-                                // msg.reply(team_imagem);
-                                quantidade++;
-                                array.push(team_imagem + " " + msg.author + " " + msg.content.substring(2));
-                                adicional = adicional + team_imagem + " " + msg.author + " " + msg.content.substring(2) + "\n";
+
+
+
+                            //msg inicia com    
+                            if (msg.content.startsWith('👍')) {
+
+
+
+
+
+                                if (msg.member.roles.has(team_valor.id)) {
+                                    team_imagem = valor.toString();
+                                    // msg.reply(team_imagem);
+                                    quantidade++;
+                                    array.push(team_imagem + " " + msg.author + " " + msg.content.substring(2));
+                                    adicional = adicional + team_imagem + " " + msg.author + " " + msg.content.substring(2) + "\n";
+                                }
+
+                                if (msg.member.roles.has(team_mystic.id)) {
+                                    team_imagem = mystic.toString();
+                                    // msg.reply(team_imagem);
+                                    quantidade++;
+                                    array.push(team_imagem + " " + msg.author + " " + msg.content.substring(2));
+                                    adicional = adicional + team_imagem + " " + msg.author + " " + msg.content.substring(2) + "\n";
+                                }
+
+                                if (msg.member.roles.has(team_instinct.id)) {
+                                    team_imagem = instinct.toString();
+                                    // msg.reply(team_imagem);
+                                    quantidade++;
+                                    array.push(team_imagem + " " + msg.author + " " + msg.content.substring(2));
+                                    adicional = adicional + team_imagem + " " + msg.author + " " + msg.content.substring(2) + "\n";
+                                }
+
+                                // 
                             }
 
-                            // 
-                        }
 
-               
+                        })
                     })
-                })
 
-                //---- fim ler mensagens 
-               
+                    //---- fim ler mensagens 
 
 
 
 
 
-                //   msg.channel.send(msg.author.toString() + ", inserido na RAID!");
 
-                //------------------------     
-               setTimeout(function () {
+                    //   msg.channel.send(msg.author.toString() + ", inserido na RAID!");
 
-                 pkmraid="";
-                 mewtwo="";   
-                    // msg.channel.send("array 0"+array);                 
-                    var result = [];
+                    //------------------------     
+                    setTimeout(function () {
+
+                        pkmraid = "";
+                        mewtwo = "";
+                        // msg.channel.send("array 0"+array);                 
+                        var result = [];
 
 
-                    array.forEach(function (item) {
-                        if (result.indexOf(item) < 0) {
-                            
-                            if(item.startsWith('%')){
-                                pkmraid=item.substring(1);
+                        array.forEach(function (item) {
+                            if (result.indexOf(item) < 0) {
+
+                                if (item.startsWith('%')) {
+                                    pkmraid = item.substring(1);
+                                }
+                                if (item.startsWith('!')) {
+                                    mewtwo = item.substring(1);
+                                }
+
+                                if (item.startsWith('!') || item.startsWith('%')) {
+
+                                } else {
+                                    result.push(item);
+                                }
                             }
-                            if(item.startsWith('!')){
-                                mewtwo=item.substring(1);
-                            }
-                            
-                            if(item.startsWith('!') || item.startsWith('%')){
-                               
-                            }else{
-                                result.push(item);
-                            }
-                        }
-                    });
+                        });
 
-                    //msg.channel.send("result 1"+result);              
+                        //msg.channel.send("result 1"+result);              
 
-                    result = result.filter(item => item !== autor);
-                    var qtatr = result.filter(item => item !== autor).length
+                        result = result.filter(item => item !== autor);
+                        var qtatr = result.filter(item => item !== autor).length
 
 
-                    //msg.channel.send("result 2"+result);            
+                        //msg.channel.send("result 2"+result);            
 
-                    //--------------------------------------               
+                        //--------------------------------------               
 
 
 
-                    criaRaid(channel.name, pkmraid, result, qtatr, mewtwo);
+                        criaRaid(channel.name, pkmraid, result, qtatr, mewtwo);
 
 
-                }, 1500);
-            
-            }
-        });
+                    }, 1500);
+
+                }
+            });
         }
-   
+
     }
 
 
@@ -346,14 +348,14 @@ return textTime = new Date(sunriseMills+(3600000*offset))
 
     //lista todos os elementos que tem a regra
     function criaRaid(canalRaid, bicho, adicional, participantesRaid, sponser) {
-        
+
         try {
 
 
 
 
 
-
+            let bosscp = "";
             var status = "Desconhecido";
             var cpiv = "Desconhecido"
 
@@ -391,30 +393,38 @@ return textTime = new Date(sunriseMills+(3600000*offset))
                 //bicho
                 if (bicho.startsWith('machamp')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000031-dcf97ddeea/450/pokemon_icon_068_00.png";
-                    cpiv = "1574-1967 1650-2063"
-                    status = "<:psiquico:478587230483513346><:voador:478587231259590676><:fada:478587230814863372>\nAlakazam: Futuresight(33.00)\nEspeon: Futuresight(35.60)\nExeggutor: Confusion(30.10)\nCharizard: Overheat(32.20)\nDragonite: Dragon Hurricane(33.95)";
+                    bosscp="18144";
+                    cpiv = "**CP** 1574-1967 / 1650-2063 <:nevoeiro:478895508551761930>"
+                    status = "<:psiquico:478587230483513346><:voador:478587231259590676><:fada:478587230814863372>\n"+
+                    "Alakazam: Futuresight(33.00)\nEspeon: Futuresight(35.60)\nExeggutor: Confusion(30.10)\n"+
+                        "Charizard: Overheat(32.20)\nDragonite: Dragon Hurricane(33.95)\n"+
+                        "**__1 Treinador:__**\n"+
+                        "Pokemons nível +32\n"+
+                     "<:psiquico:478587230483513346>\n"+
+                        "Mewtwo\nAlakazam\nEspeon\nLugia\nExeggutor";
                 }
-                
-                
+
+
                 if (bicho.startsWith('piloswine')) {
-    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000041-e63f3e7363/450/poliswine.png";
-    cpiv = "**BOSS CP** : 13663\n**CP** 1305 <:sol:478895508413349910> <:gelo:478587230164615174> 1631\n";
-    status = "<:fogo:478587230747754543> <:luta:478587139756392448> <:erva:478587230814994432> " +
-        "<:steel:478587109725306880> <:steel:478587109725306880>\n" +
-        "ENTEI\n " +
-        "Fire Fang - Overheat \n" +
-        "Kyogre\n" +
-        "Waterfall -	Hydro Pump \n" +
-        "Moltres\n" +
-        "Fire Spin -	Overheat \n" +
-        "Machamp\n" +
-        "Counter - Dynamic Punch \n";
-    
-}
-                
-                
-                
-                
+                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000041-e63f3e7363/450/poliswine.png";
+                    bosscp="13663";
+                    cpiv = "**CP** 1305 <:sol:478895508413349910> <:gelo:478587230164615174> 1631\n";
+                    status = "<:fogo:478587230747754543> <:luta:478587139756392448> <:erva:478587230814994432> " +
+                        "<:steel:478587109725306880> <:steel:478587109725306880>\n" +
+                        "ENTEI\n " +
+                        "Fire Fang - Overheat \n" +
+                        "Kyogre\n" +
+                        "Waterfall -	Hydro Pump \n" +
+                        "Moltres\n" +
+                        "Fire Spin -	Overheat \n" +
+                        "Machamp\n" +
+                        "Counter - Dynamic Punch \n";
+
+                }
+
+
+
+
             }
             //----     
 
@@ -426,38 +436,40 @@ return textTime = new Date(sunriseMills+(3600000*offset))
 
                 braid = ovo;
 
-                
-                
-                
-if (bicho.startsWith('rhydon')) {
-    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png";
-    cpiv = "**BOSS CP** : 30512\n**CP** 1886 <:sol:478895508413349910> <:nevoeiro:478895508551761930> 2357\n";
-    status = "<:chuva:478895508673527808> <:sol:478895508413349910> " +
-    "Kyogre\n"+
-    "Waterfall	Hydro Pump \n	"+
-    "Venusaur\n"+
-    "Vine Whip -	Frenzy Plant\n "+
-    "Poliwrath\n"+
-    "Bubble -	Hydro Pump\n "+
-    "Gyarados\n"+
-    "Waterfall -	Hydro Pump \n	"+
-    "Exeggutor\n"+
-    "Bullet Seed -	Solar Beam ";
-}
 
-                
-                
-                
+
+
+                if (bicho.startsWith('rhydon')) {
+                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png";
+                    bosscp="30512";
+                    cpiv = "**CP** 1886 <:sol:478895508413349910> <:nevoeiro:478895508551761930> 2357\n";
+                    status = "<:chuva:478895508673527808> <:sol:478895508413349910> " +
+                        "Kyogre\n" +
+                        "Waterfall	Hydro Pump \n	" +
+                        "Venusaur\n" +
+                        "Vine Whip -	Frenzy Plant\n " +
+                        "Poliwrath\n" +
+                        "Bubble -	Hydro Pump\n " +
+                        "Gyarados\n" +
+                        "Waterfall -	Hydro Pump \n	" +
+                        "Exeggutor\n" +
+                        "Bullet Seed -	Solar Beam ";
+                }
+
+
+
+
                 if (bicho.startsWith('hundoom')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000040-1e1dc1f153/450/houndoom.png";
-                    cpiv = "**BOSS CP** : 2730220\n**CP** 1445 <:nevoeiro:478895508551761930><:sol:478895508413349910>2529\n";
-                   
-                    status = "<:agua:478587230730846210><:luta:478587139756392448><:ground:478587230168809477><:pedra:478587231200739328>\n"+
+                    cpiv = "**CP** 1445 <:nevoeiro:478895508551761930><:sol:478895508413349910>2529\n";
+                    bosscp="2730220";
+                    status = "<:agua:478587230730846210><:luta:478587139756392448><:ground:478587230168809477><:pedra:478587231200739328>\n" +
                         "Machamp\nHariyama\nBlaziken\nKyogre";
                 }
 
                 if (bicho.startsWith('golem')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000037-85af786acf/450/golem.png";
+                    bosscp="";
                     cpiv = "20 CP 1666";
                     status = "Duplo fraco contra WATER e GRASS\nKyogre Waterfall - Hydro Pump\nGyarados Waterfall - Hydro Pump\nGroudon Mud Shot - Solar Beam"
                 }
@@ -465,7 +477,8 @@ if (bicho.startsWith('rhydon')) {
 
                 if (bicho.startsWith('absol')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png";
-                    cpiv = "**BOSS CP** : 26262\n**CP**1232-1303/1540-1629\n";
+                    bosscp="26262";
+                    cpiv = "**CP**1232-1303/1540-1629\n";
                     status = "<:inseto:478587230479188003><:fada:478587230814863372><:luta:478587139756392448>\n" +
                         "Machamp Dynamic Punch\n" +
                         "HariyamaDynamic Punch\n" +
@@ -477,7 +490,21 @@ if (bicho.startsWith('rhydon')) {
                 }
 
                 if (bicho.startsWith('tyra')) {
+                    bosscp="34707";
+                    cpiv = "**CP** 2097 / 2621 <:nevoeiro:478895508551761930> <:forrado:478895508706820126>\n";
+                    bosscp="34707";
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000029-e0378e12f0/450/tyra.png";
+                    status = "\n" +
+                        "<:dark:478587231183831049> <:pedra:478587231200739328>\n"+
+                       "**2 X Fraco** <:luta:478587139756392448>\n"+
+                        "Machamp\nDynamic Punch\n" +
+                    "Hariyama\n"+ 
+"Counter 	Dynamic Punch\n"+  
+"Blaziken\n"+ 
+"Counter 	Focus Blast\n"+  
+"Kyogre\n"+ 
+"Waterfall 	Hydro Pump";  
+                        
                 }
             } //----  
 
@@ -491,7 +518,8 @@ if (bicho.startsWith('rhydon')) {
 
                 if (bicho.startsWith('regirock')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000039-889a38996c/450/regirock-2.png";
-                    cpiv = "**BOSS CP** : 41777\n**CP** 1764 <:forrado:478895508706820126> 2205\n";
+                    bosscp="41777";
+                    cpiv = "**CP** 1682-1764 / 2103-2205 <:nuvens:478895508681916416> \n";
                     status = "<:luta:478587139756392448><:ground:478587230168809477><:agua:478587230730846210><:steel:478587109725306880>\n" +
                         "Kyogre Waterfall-Hydro Pump\n" +
                         "Groudon Mud Shot - Solar Beam \n" +
@@ -500,6 +528,7 @@ if (bicho.startsWith('rhydon')) {
 
                 if (bicho.startsWith('regis')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000035-0751e084bd/450/registeel.png";
+                    bosscp="";
                     cpiv = "1222-1292 / 1528-1615";
                     status = "Charizard with Overheat\nBlaziken FIRE\nTyphlosion - Overheat\nArcanine - Flamethrower\nSalamance - Fire Fang - Fire Blast\nHeracross - Combat\n";
                 }
@@ -508,16 +537,19 @@ if (bicho.startsWith('rhydon')) {
 
                 if (bicho.startsWith('regice')) {
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png";
+                    bosscp="";
                     cpiv = "1682-1764 / 2103-2205";
                     status = "ENTEI\nMOLTRES\nCHARIZARD\nFLAREON\nHO-oh";
                 }
 
                 if (bicho.startsWith('ohoh')) {
+                    bosscp="";
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000026-5ec255fb74/450/Ho-Oh.png";
                 }
 
 
                 if (bicho.startsWith('articune')) {
+                    bosscp="";
                     braid = "https://exraidspinhalnovo.webnode.pt/_files/200000030-050b3060a3/450/articune.png";
                 }
 
@@ -535,7 +567,7 @@ if (bicho.startsWith('rhydon')) {
             //----  FIM TIPO RAID ---
 
 
-            disparaRaid(local, horas, canalRaid, adicional, participantesRaid, ovo, braid, cpiv, status, adicional);
+            disparaRaid(local, horas, canalRaid, adicional, participantesRaid, ovo, braid, cpiv, status, adicional,bosscp);
             //  msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage(msg.guild.channels.find("name", msg.channel.name)+"\n"+membersWithRole.join("\n"));
 
         } catch (err) {
@@ -553,9 +585,9 @@ if (bicho.startsWith('rhydon')) {
 
 
 
-    function disparaRaid(local, horas, canal, treinadores, total, ovo, bicho, cpiv, status, adicional) {
+    function disparaRaid(local, horas, canal, treinadores, total, ovo, bicho, cpiv, status, adicional,cpboss) {
 
-//msg.reply("disparaRaid");
+        //msg.reply("disparaRaid");
         const embed = new Discord.RichEmbed()
             .setTitle(horas)
             .setAuthor(local.toUpperCase(), ovo)
@@ -574,7 +606,7 @@ if (bicho.startsWith('rhydon')) {
              */
             .setTimestamp()
             .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-            .addField("NÍVEL CP ", cpiv)
+            .addField("BOSS CP "+cpboss, cpiv)
 
             /*
              * lista dos jogadores que vão RAID.
@@ -608,24 +640,31 @@ if (bicho.startsWith('rhydon')) {
 
 
 
-
+              var text= msg.content.substring(1);
 
             //LE A MENSAGEM EXCLUINDO O !
-            var text = msg.content.substring(1);
-
+            var text=text.replace(/[`~@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+            text=text.replace(/\s\s+/g, ' ');;
+           
+            msg.reply(text)
+            msg.reply(text)
+            
             var canal = '_raid' + text
+            
             canal = canal.split('!').join('').toLowerCase();
             var nomecanal = canal.split(' ').join('-').toLowerCase();
-             nomecanal = nomecanal.replace('--', '-');
-          
+             msg.reply(nomecanal); 
+            nomecanal = nomecanal.replace(/--/gi, '-');
+            
+            msg.reply(nomecanal); 
             if (msg.guild.channels.find("name", nomecanal)) {
             } else {
-            
+
                 msg.guild.createChannel(nomecanal, "text");
 
 
             }
-//
+            //
             setTimeout(apagacanal, 4580000, nomecanal);
             setTimeout(myFunc, 1500, nomecanal);
 
@@ -651,7 +690,7 @@ if (bicho.startsWith('rhydon')) {
                  */
                 .setColor(0x00AE86)
                 .setDescription(texto)
-                .setFooter("Equipa - PKG Pinhal Novo, pubicado a, ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+                .setFooter("Equipa - PKG Pinhal Novo, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
 
 
                 .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000025-adf2daee85/450/Pryce.png")
