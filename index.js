@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
-
+var resposta = require('./resposta.json');
 const client = new Discord.Client();
-
+var jsonData = require('./raidspn.json');
 const prefix = "+";
 
 
@@ -34,24 +34,23 @@ client.on("message", async (msg) => {
     //---------------------------------------------------	
     //informação 	
     //---------------------------------------------------	
-    const responseObject = {
-        "autor": "Damasc010, Paulo Rosário!",
-        "versão": "v3.01 de agosto 2018 - Pokemon go Pinhal Novo",
-        "regirock": "**REGIROCK**\n" +
-            "**BOSS CP** : 41777\nNível 20 CP 1764 Nível 25 CP 2205\n" +
-            "<:luta:478587139756392448><:ground:478587230168809477><:agua:478587230730846210><:steel:478587109725306880>\n" +
-            "Kyogre Waterfall-Hydro Pump\n" +
-            "Groudon Mud Shot - Solar Beam \n" +
-            "Machamp Counter - Dynamic Punch",
+   
 
-        "machamp": "RAID BOSS CP 18144\nCaptura 100% IV : 1574-1967 1650-2063\n" +
-            "**Fraco contra:**\n<:psiquico:478587230483513346><:voador:478587231259590676><:fada:478587230814863372>\n" +
-            "Alakazam: Futuresight(33.00)\nEspeon: Futuresight(35.60)\nExeggutor: Confusion(30.10)\nCharizard: Overheat(32.20)\nDragonite: Dragon Hurricane(33.95)"
+    if (resposta[msg.content]) {
+        msg.channel.send({embed: {
+  color: 16580627,
+      
+  description: "**Resposta a : **"+msg.content+"\n\n\n"+resposta[msg.content],
+            timestamp: new Date(),
+                footer: {
+                    icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
+                    text: "Equipa - PKG Pinhal Novo,"
+                }
 
-    };
-
-    if (responseObject[msg.content]) {
-        msg.channel.send(responseObject[msg.content]);
+}});
+        
+        
+      
 
     }
     //---------------------------------------------------		
@@ -365,7 +364,7 @@ client.on("message", async (msg) => {
 
             cor = "0x00AE86";
 
-
+//nivel da raid
             var tiporaid = canalRaid.substring(5, 6);
 
 
@@ -382,178 +381,47 @@ client.on("message", async (msg) => {
 
             }
 
+//----- novo 
+            
 
-            //---- TIPO RAID ----
-
-            if (tiporaid.startsWith('3')) {
-                ovo = "https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
-
-                braid = ovo;
-
-                //bicho
-                if (bicho.startsWith('machamp')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000031-dcf97ddeea/450/pokemon_icon_068_00.png";
-                    bosscp="18144";
-                    cpiv = "**CP** 1574-1967 / 1650-2063 <:nevoeiro:478895508551761930>"
-                    status = "<:psiquico:478587230483513346><:voador:478587231259590676><:fada:478587230814863372>\n"+
-                    "Alakazam: Futuresight(33.00)\nEspeon: Futuresight(35.60)\nExeggutor: Confusion(30.10)\n"+
-                        "Charizard: Overheat(32.20)\nDragonite: Dragon Hurricane(33.95)\n"+
-                        "**__1 Treinador:__**\n"+
-                        "Pokemons nível +32\n"+
-                     "<:psiquico:478587230483513346>\n"+
-                        "Mewtwo\nAlakazam\nEspeon\nLugia\nExeggutor";
-                }
-
-
-                if (bicho.startsWith('piloswine')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000041-e63f3e7363/450/poliswine.png";
-                    bosscp="13663";
-                    cpiv = "**CP** 1305 <:sol:478895508413349910> <:gelo:478587230164615174> 1631\n";
-                    status = "<:fogo:478587230747754543> <:luta:478587139756392448> <:erva:478587230814994432> " +
-                        "<:steel:478587109725306880> <:steel:478587109725306880>\n" +
-                        "ENTEI\n " +
-                        "Fire Fang - Overheat \n" +
-                        "Kyogre\n" +
-                        "Waterfall -	Hydro Pump \n" +
-                        "Moltres\n" +
-                        "Fire Spin -	Overheat \n" +
-                        "Machamp\n" +
-                        "Counter - Dynamic Punch \n";
-
-                }
+var raids = jsonData.map(x => x)
+var tamanhoFicheiro = Object.keys(raids).length;
 
 
 
+switch (tiporaid) {
 
-            }
-            //----     
-
-
-
-
-            if (tiporaid.startsWith('4')) {
-                ovo = "https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
-
-                braid = ovo;
-
-
-
-
-                if (bicho.startsWith('rhydon')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png";
-                    bosscp="30512";
-                    cpiv = "**CP** 1886 <:sol:478895508413349910> <:nevoeiro:478895508551761930> 2357\n";
-                    status = "<:chuva:478895508673527808> <:sol:478895508413349910> " +
-                        "Kyogre\n" +
-                        "Waterfall	Hydro Pump \n	" +
-                        "Venusaur\n" +
-                        "Vine Whip -	Frenzy Plant\n " +
-                        "Poliwrath\n" +
-                        "Bubble -	Hydro Pump\n " +
-                        "Gyarados\n" +
-                        "Waterfall -	Hydro Pump \n	" +
-                        "Exeggutor\n" +
-                        "Bullet Seed -	Solar Beam ";
-                }
+    case "3":
+        ovo = "https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
+        braid = ovo;
+        break;
+    case "4":
+        ovo = "https://exraidspinhalnovo.webnode.pt/_files/200000027-959cf96a39/200/4.png";
+        braid = ovo;
+        break;
+    case "5":
+        ovo = "https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png";
+        braid = ovo;
+        break;
+}
 
 
 
-
-                if (bicho.startsWith('hundoom')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000040-1e1dc1f153/450/houndoom.png";
-                    cpiv = "**CP** 1445 <:nevoeiro:478895508551761930><:sol:478895508413349910>2529\n";
-                    bosscp="2730220";
-                    status = "<:agua:478587230730846210><:luta:478587139756392448><:ground:478587230168809477><:pedra:478587231200739328>\n" +
-                        "Machamp\nHariyama\nBlaziken\nKyogre";
-                }
-
-                if (bicho.startsWith('golem')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000037-85af786acf/450/golem.png";
-                    bosscp="";
-                    cpiv = "20 CP 1666";
-                    status = "Duplo fraco contra WATER e GRASS\nKyogre Waterfall - Hydro Pump\nGyarados Waterfall - Hydro Pump\nGroudon Mud Shot - Solar Beam"
-                }
-
-
-                if (bicho.startsWith('absol')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png";
-                    bosscp="26262";
-                    cpiv = "**CP**1232-1303/1540-1629\n";
-                    status = "<:inseto:478587230479188003><:fada:478587230814863372><:luta:478587139756392448>\n" +
-                        "Machamp Dynamic Punch\n" +
-                        "HariyamaDynamic Punch\n" +
-                        "Heracross Close Combat\n" +
-                        "Breloom Dynamic Punch\n" +
-                        "Pinsir Bite\n" +
-                        "Blaziken Overheat\n" +
-                        "Scizor Fury Cutter";
-                }
-
-                if (bicho.startsWith('tyra')) {
-                    bosscp="34707";
-                    cpiv = "**CP** 2097 / 2621 <:nevoeiro:478895508551761930> <:forrado:478895508706820126>\n";
-                    bosscp="34707";
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000029-e0378e12f0/450/tyra.png";
-                    status = "\n" +
-                        "<:dark:478587231183831049> <:pedra:478587231200739328>\n"+
-                       "**2 X Fraco** <:luta:478587139756392448>\n"+
-                        "Machamp\nDynamic Punch\n" +
-                    "Hariyama\n"+ 
-"Counter 	Dynamic Punch\n"+  
-"Blaziken\n"+ 
-"Counter 	Focus Blast\n"+  
-"Kyogre\n"+ 
-"Waterfall 	Hydro Pump";  
-                        
-                }
-            } //----  
-
-
-            //------
-            if (tiporaid.startsWith('5')) {
-                ovo = "https://exraidspinhalnovo.webnode.pt/_files/200000019-4d5f84e5ec/200/Egg_Raid_Legendary.png";
-
-                braid = ovo;
-
-
-                if (bicho.startsWith('regirock')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000039-889a38996c/450/regirock-2.png";
-                    bosscp="41777";
-                    cpiv = "**CP** 1682-1764 / 2103-2205 <:nuvens:478895508681916416> \n";
-                    status = "<:luta:478587139756392448><:ground:478587230168809477><:agua:478587230730846210><:steel:478587109725306880>\n" +
-                        "Kyogre Waterfall-Hydro Pump\n" +
-                        "Groudon Mud Shot - Solar Beam \n" +
-                        "Machamp Counter - Dynamic Punch";
-                }
-
-                if (bicho.startsWith('regis')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000035-0751e084bd/450/registeel.png";
-                    bosscp="";
-                    cpiv = "1222-1292 / 1528-1615";
-                    status = "Charizard with Overheat\nBlaziken FIRE\nTyphlosion - Overheat\nArcanine - Flamethrower\nSalamance - Fire Fang - Fire Blast\nHeracross - Combat\n";
-                }
-
-
-
-                if (bicho.startsWith('regice')) {
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png";
-                    bosscp="";
-                    cpiv = "1682-1764 / 2103-2205";
-                    status = "ENTEI\nMOLTRES\nCHARIZARD\nFLAREON\nHO-oh";
-                }
-
-                if (bicho.startsWith('ohoh')) {
-                    bosscp="";
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000026-5ec255fb74/450/Ho-Oh.png";
-                }
-
-
-                if (bicho.startsWith('articune')) {
-                    bosscp="";
-                    braid = "https://exraidspinhalnovo.webnode.pt/_files/200000030-050b3060a3/450/articune.png";
-                }
-
-            }//----    
+for (var x = 0; x < tamanhoFicheiro; x++) {
+   
+    if (tiporaid==raids[x].nivel && bicho==raids[x].boss){
+        
+        braid = raids[x].imagem;
+        bosscp = raids[x].bosscp;
+        cpiv = raids[x].cpiv + " " + raids[x].bosted
+        status = raids[x].fraco + "\n" + raids[x].counter
+    }
+}      
+            
+            
+            
+  //--- fim novo          
+         
 
 
 
@@ -597,7 +465,7 @@ client.on("message", async (msg) => {
             */
             .setColor(cor)
             .setDescription("Use o canal " + msg.guild.channels.find("name", canal))
-            .setFooter("Equipa - PKG Pinhal Novo, pubicado a, ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+            .setFooter("Equipa - PKG Pinhal Novo, ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
             // .setImage("http://i.imgur.com/yVpymuV.png")
 
             .setThumbnail(bicho)
