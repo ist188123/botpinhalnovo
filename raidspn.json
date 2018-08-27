@@ -28,7 +28,7 @@
     {
         "nivel": "3",
         "boss": "golem",
-        "bosstipo":" ",
+        "bosstipo":"<:sol:478895508413349910> <:nuvens:478579734322872321> ",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000037-85af786acf/450/golem.png",
         "bosscp": "32000",
         "cpiv": "20 CP 1666",
@@ -44,7 +44,7 @@
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png",
         "bosscp": "30512",
         "cpiv": "1886 / 2357",
-        "bosted":"<:sol:478895508413349910> <:nevoeiro:478895508551761930>",
+        "bosted":"<:sol:478895508413349910> <:nuvens:478579734322872321>",
         "fraco": "<:chuva:478895508673527808> <:sol:478895508413349910> ",
         "counter": "Kyogre\nWaterfall Hydro Pump \nVenusaur\nVine Whip - Frenzy Plant\nPoliwrath\nBubble - Hydro Pump\nGyarados\nWaterfall - Hydro Pump \nExeggutor\nBullet Seed - Solar Beam "
     },
@@ -80,8 +80,8 @@
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000029-e0378e12f0/450/tyra.png",
         "bosscp": "24707",
         "cpiv": "2097 / 2621",
-        "bosted":"<:nevoeiro:478895508551761930> <:forrado:478895508706820126>",
-        "fraco": "<:dark:478587231183831049> <:pedra:478587231200739328> 2X <:luta:478587139756392448>",
+        "bosted":"<:nevoeiro:478895508551761930> <:nuvens:478895508681916416>",
+        "fraco": "<:agua:478587230730846210><:erva:478587230814994432><:ground:478587230168809477><:fada:478587230814863372><:steel:478587109725306880><:inseto:478587230479188003> 2X <:luta:478587139756392448>",
         "counter": "Machamp\nDynamic Punch\nHariyama\nCounter - Dynamic Punch\nBlaziken\nCounter - Focus Blast\nKyogre\nWaterfall - Hydro Pump"
     },
 
@@ -90,6 +90,7 @@
     {
         "nivel": "5",
         "boss": "regirock",
+         "bosstipo":"<:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000039-889a38996c/450/regirock-2.png",
         "bosscp": "41777",
         "cpiv": "1682-1764 / 2103-2205",
@@ -101,6 +102,7 @@
     {
         "nivel": "5",
         "boss": "regis",
+         "bosstipo":"<:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000035-0751e084bd/450/registeel.png",
         "bosscp": "41777",
         "cpiv": "1222-1292 / 1528-1615",
@@ -112,6 +114,7 @@
     {
         "nivel": "5",
         "boss": "regice",
+         "bosstipo":"<:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000018-6874a696da/450/regice.png",
         "bosscp": "41777",
         "cpiv": "1682-1764 / 2103-2205",
@@ -123,6 +126,7 @@
     {
         "nivel": "5",
         "boss": "articune",
+         "bosstipo":"<:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000030-050b3060a3/450/articune.png",
         "bosscp": "41777",
         "cpiv": "1682-1764 / 2103-2205",
@@ -133,7 +137,8 @@
 
     {
         "nivel": "5",
-        "boss": "ohoh",
+        "boss": "hooh",
+         "bosstipo":"<:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000026-5ec255fb74/450/Ho-Oh.png",
         "bosscp": "48276",
         "cpiv": "2222 / 2778",
