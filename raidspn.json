@@ -28,12 +28,12 @@
     {
         "nivel": "3",
         "boss": "golem",
-        "bosstipo":"<:sol:478895508413349910> <:nuvens:478579734322872321> ",
+        "bosstipo":"<:ground:478587230168809477><:pedra:478587231200739328>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000037-85af786acf/450/golem.png",
         "bosscp": "32000",
         "cpiv": "20 CP 1666",
-        "bosted":"<:nuvens:478579734322872321>",
-        "fraco": "",
+        "bosted":"<:sol:478895508413349910> <:nuvens:478579734322872321> ",
+        "fraco": "2X <:agua:478587230730846210><:erva:478587230814994432>",
         "counter": "Duplo fraco contra WATER e GRASS\nKyogre Waterfall - Hydro Pump\nGyarados Waterfall - Hydro Pump\nGroudon Mud Shot - Solar Beam"
     },
 
