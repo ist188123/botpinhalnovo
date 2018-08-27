@@ -76,6 +76,7 @@
     {
         "nivel": "4",
         "boss": "tyra",
+        "bosstipo":"<:pedra:478587231200739328><:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000029-e0378e12f0/450/tyra.png",
         "bosscp": "24707",
         "cpiv": "2097 / 2621",
