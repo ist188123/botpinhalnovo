@@ -412,9 +412,10 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
     if (tiporaid==raids[x].nivel && bicho==raids[x].boss){
         
         braid = raids[x].imagem;
-        bosscp = raids[x].bosscp;
-        cpiv = raids[x].cpiv + " " + raids[x].bosted
-        status = raids[x].fraco + "\n" + raids[x].counter
+       
+        cpiv = raids[x].cpiv + " " + raids[x].bosted;
+        bosscp = raids[x].bosscp+" "+raids[x].bosstipo;
+        status = raids[x].fraco + "\n" + raids[x].counter;
     }
 }      
             
