@@ -3,10 +3,11 @@
     {
         "nivel": "3",
         "boss": "machamp",
+        "bosstipo":"<:luta:478587139756392448>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000031-dcf97ddeea/450/pokemon_icon_068_00.png",
         "bosscp": "18144",
         "cpiv": "1574-1967 / 1650-2063",
-        "bosted":"<:nevoeiro:478895508551761930>",
+        "bosted":"<:forrado:478895508706820126>",
         "fraco": "<:psiquico:478587230483513346><:voador:478587231259590676><:fada:478587230814863372>",
         "counter": "Alakazam: Futuresight(33.00)\nEspeon: Futuresight(35.60)\nExeggutor: Confusion(30.10)\nCharizard: Overheat(32.20)\nDragonite: Dragon Hurricane(33.95)\n**__1 Treinador:__**\nPokemons nível +32\n<:psiquico:478587230483513346>\nMewtwo\nAlakazam\nEspeon\nLugia\nExeggutor"
     },
@@ -14,10 +15,11 @@
     {
         "nivel": "3",
         "boss": "piloswine",
+        "bosstipo":"<:gelo:478587230164615174><:ground:478587230168809477>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000041-e63f3e7363/450/poliswine.png",
         "bosscp": "13663",
         "cpiv": "1305 / 1631",
-        "bosted":"<:sol:478895508413349910> <:gelo:478587230164615174>",
+        "bosted":"<:sol:478895508413349910> <:neve:478895508639973386>",
         "fraco": "<:fogo:478587230747754543> <:luta:478587139756392448> <:erva:478587230814994432> <:steel:478587109725306880> <:steel:478587109725306880>",
         "counter": "ENTEI\nFire Fang - Overheat \nKyogre\nWaterfall - Hydro Pump \nMoltres\nFire Spin - Overheat \nMachamp\nCounter - Dynamic Punch"
     },
@@ -26,6 +28,7 @@
     {
         "nivel": "3",
         "boss": "golem",
+        "bosstipo":" ",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000037-85af786acf/450/golem.png",
         "bosscp": "32000",
         "cpiv": "20 CP 1666",
@@ -37,6 +40,7 @@
     {
         "nivel": "4",
         "boss": "rhydon",
+        "bosstipo":" ",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png",
         "bosscp": "30512",
         "cpiv": "1886 / 2357",
@@ -48,6 +52,7 @@
     {
         "nivel": "4",
         "boss": "hundoom",
+        "bosstipo":" ",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000040-1e1dc1f153/450/houndoom.png",
         "bosscp": "27302",
         "cpiv": "1445 / 2529",
@@ -59,6 +64,7 @@
     {
         "nivel": "4",
         "boss": "absol",
+        "bosstipo":"<:dark:478587231183831049>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000028-3bf1a3ce89/450/apsol.png",
         "bosscp": "26262",
         "cpiv": "1232-1303 / 1540-1629",
