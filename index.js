@@ -44,7 +44,7 @@ client.on("message", async (msg) => {
             timestamp: new Date(),
                 footer: {
                     icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
-                    text: "By Damasc010 - PKG Pinhal Novo,"
+                    text: "By Damasc010, PKG - Pinhal Novo, pubicado "
                 }
 
 }});
@@ -81,7 +81,7 @@ client.on("message", async (msg) => {
                 timestamp: new Date(),
                 footer: {
                     icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
-                    text: "By Damasc010 - PKG Pinhal Novo,"
+                    text: "By Damasc010, PKG - Pinhal Novo, pubicado "
                 }
 
             }
@@ -558,7 +558,7 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
                  */
                 .setColor(0x00AE86)
                 .setDescription(texto)
-                .setFooter("By Damasc010 - PKG Pinhal Novo, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+                .setFooter("By Damasc010, PKG - Pinhal Novo, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
 
 
                 .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000025-adf2daee85/450/Pryce.png")
