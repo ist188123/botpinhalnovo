@@ -44,7 +44,7 @@ client.on("message", async (msg) => {
             timestamp: new Date(),
                 footer: {
                     icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
-                    text: "By Damasc010, PKG - Pinhal Novo, pubicado "
+                    text: "Desenvolvido por Damasc010 - Pinhal Novo, pubicado "
                 }
 
 }});
@@ -81,7 +81,7 @@ client.on("message", async (msg) => {
                 timestamp: new Date(),
                 footer: {
                     icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
-                    text: "By Damasc010, PKG - Pinhal Novo, pubicado "
+                    text: "Desenvolvido por Damasc010 - Pinhal Novo, pubicado "
                 }
 
             }
@@ -466,7 +466,7 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
             */
             .setColor(cor)
             .setDescription("Use o canal " + msg.guild.channels.find("name", canal))
-            .setFooter("By Damasc010 - PKG Pinhal Novo, ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+            .setFooter("Desenvolvido por Damasc010, PKG - Pinhal Novo, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
             // .setImage("http://i.imgur.com/yVpymuV.png")
 
             .setThumbnail(bicho)
@@ -558,7 +558,7 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
                  */
                 .setColor(0x00AE86)
                 .setDescription(texto)
-                .setFooter("By Damasc010, PKG - Pinhal Novo, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+                .setFooter("Desenvolvido por Damasc010, PKG - Pinhal Novo, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
 
 
                 .setThumbnail("https://exraidspinhalnovo.webnode.pt/_files/200000025-adf2daee85/450/Pryce.png")
