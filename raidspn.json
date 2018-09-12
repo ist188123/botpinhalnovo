@@ -84,6 +84,17 @@
         "fraco": "<:agua:478587230730846210><:erva:478587230814994432><:ground:478587230168809477><:fada:478587230814863372><:steel:478587109725306880><:inseto:478587230479188003> 2X <:luta:478587139756392448>",
         "counter": "Machamp\nDynamic Punch\nHariyama\nCounter - Dynamic Punch\nBlaziken\nCounter - Focus Blast\nKyogre\nWaterfall - Hydro Pump"
     },
+    {
+        "nivel": "5",
+        "boss": "moltres",
+         "bosstipo":" <:fogo:478587230747754543><:voador:478587231259590676>  ",
+        "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000050-289e8299a1/450/moltres.png",
+        "bosscp": "41953",
+        "cpiv": "1788–1870 / 2235–2337",
+        "bosted":" <:vento:478895508685979648><:sol:478895508413349910> ",
+        "fraco": "<:agua:478587230730846210><:pedra:478587231200739328><:eletrico:478587230508548097>",
+        "counter": "Tyranitar Smack Down + Stone Edge\nGolem Rock Throw + Stone Edge\nKyogre Waterfall + Hydro Pump "
+    },
 
 {
         "nivel": "5",
