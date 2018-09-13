@@ -86,6 +86,19 @@
     },
     {
         "nivel": "5",
+        "boss": "zapdos",
+         "bosstipo":" <:eletrico:478587230508548097><:voador:478587231259590676>  ",
+        "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000052-61bc062bd1/450/zapdos.png",
+        "bosscp": "42961",
+        "cpiv": "1820–1902 / 2275–2378",
+        "bosted":" <:vento:478895508685979648><:chuva:478895508673527808> ",
+        "fraco": "<:pedra:478587231200739328><:gelo:478587230164615174>",
+        "counter": "Tyranitar Smack Down + Stone Edge\nRayquaza Dragon Tail + Outrage\nGolem Rock Throw + Stone Edge "
+    },
+
+    
+    {
+        "nivel": "5",
         "boss": "moltres",
          "bosstipo":" <:fogo:478587230747754543><:voador:478587231259590676>  ",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000050-289e8299a1/450/moltres.png",
