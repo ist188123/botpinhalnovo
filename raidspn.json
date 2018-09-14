@@ -38,6 +38,17 @@
     },
     {
         "nivel": "4",
+        "boss": "snorlax",
+        "bosstipo":" <:normal:478587230298963968>",
+        "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000053-b3ee1b4e8b/450/Snorlax.png",
+        "bosscp": "25419",
+        "cpiv": "1917 / 2396",
+        "bosted":"<:nuvens:478895508681916416>",
+        "fraco": "<:luta:478587139756392448><:fantasma:478587230839898127><:steel:478587109725306880><:pedra:478587231200739328>",
+        "counter": "Machamp	Dynamic Punch + Close Combat\nTyranitar Bite + Stone Edge\nDragonite Dragon Tail + Outrage"
+    },
+    {
+        "nivel": "4",
         "boss": "lapras",
         "bosstipo":" <:agua:478587230730846210><:gelo:478587230164615174>",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000054-3eefb3fe9f/450/lapras.png",
