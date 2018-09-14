@@ -36,6 +36,17 @@
         "fraco": "2X <:agua:478587230730846210><:erva:478587230814994432>",
         "counter": "Duplo fraco contra WATER e GRASS\nKyogre Waterfall - Hydro Pump\nGyarados Waterfall - Hydro Pump\nGroudon Mud Shot - Solar Beam"
     },
+    {
+        "nivel": "4",
+        "boss": "lapras",
+        "bosstipo":" <:agua:478587230730846210><:gelo:478587230164615174>",
+        "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000054-3eefb3fe9f/450/lapras.png",
+        "bosscp": "21768",
+        "cpiv": "1487 / 1859",
+        "bosted":"<:neve:478895508639973386><:chuva:478895508673527808>",
+        "fraco": "<:eletrico:478587230508548097><:erva:478587230814994432><:luta:478587139756392448><:pedra:478587231200739328>",
+        "counter": "Raiku\nMachamp\nHariyama\nMewtwo\nZapdos"
+    },
 
     {
         "nivel": "4",
@@ -43,7 +54,7 @@
         "bosstipo":" ",
         "imagem": "https://exraidspinhalnovo.webnode.pt/_files/200000042-e928beb0f2/450/rhydon.png",
         "bosscp": "30512",
-        "cpiv": "1886 / 2357",
+        "cpiv": "1886 / 2357 ",
         "bosted":"<:sol:478895508413349910> <:nuvens:478579734322872321>",
         "fraco": "<:chuva:478895508673527808> <:sol:478895508413349910> ",
         "counter": "Kyogre\nWaterfall Hydro Pump \nVenusaur\nVine Whip - Frenzy Plant\nPoliwrath\nBubble - Hydro Pump\nGyarados\nWaterfall - Hydro Pump \nExeggutor\nBullet Seed - Solar Beam "
