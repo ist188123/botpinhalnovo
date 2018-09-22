@@ -543,6 +543,35 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
     //fim criar canal----
 
 
+    if (msg.channel.name.startsWith('adm-pg-')) {
+    var regra="";
+  var role = "";
+  if (msg.content.startsWith('+')) {
+    msg.guild.channels.find("name", "buddy-quest-lab").sendMessage("Olá, "+msg.author+"\nAdicionado ás notificações da Quest de "+msg.content.substring(1)+", no canal "+msg.guild.channels.find("name", "quest-notificacao") );
+    
+      
+     regra=msg.content.substring(1).toUpperCase();
+     role = msg.guild.roles.find(role => role.name === regra);
+    msg.member.addRole(role);
+    
+  }
+  
+  if (msg.content.startsWith('-')) {
+    regra=msg.content.substring(1).toUpperCase();
+     role = msg.guild.roles.find(role => role.name === regra);
+    msg.member.removeRole(role);
+     msg.guild.channels.find("name", "buddy-quest-lab").sendMessage("Olá, "+msg.author+"\nRemovido das notificações da Quest de "+msg.content.substring(1)+", no canal "+msg.guild.channels.find("name", "quest-notificacao") );
+   
+  }
+ 
+    
+    }
+    
+    
+    
+    
+    
+    
 
 
     //---teste ----
