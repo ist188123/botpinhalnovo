@@ -543,29 +543,7 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
     //fim criar canal----
 
 
-    if (msg.channel.name.startsWith('adm-pg-')) {
-    var regra="";
-  var role = "";
-  if (msg.content.startsWith('+')) {
-    msg.guild.channels.find("name", "exraid").sendMessage(msg.author);
     
-      
-     regra=msg.content.substring(1).toUpperCase();
-     role = msg.guild.roles.find(role => role.name === regra);
-    msg.member.addRole(role);
-    
-  }
-  
-  if (msg.content.startsWith('-')) {
-    regra=msg.content.substring(1).toUpperCase();
-     role = msg.guild.roles.find(role => role.name === regra);
-    msg.member.removeRole(role);
-     msg.guild.channels.find("name", "exraid").sendMessage(msg.author+"\nRemovido da Ex-RAID ");
-   
-  }
- 
-    
-    }
     
     
     
