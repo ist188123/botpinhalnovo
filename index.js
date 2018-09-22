@@ -547,7 +547,7 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
     var regra="";
   var role = "";
   if (msg.content.startsWith('+')) {
-    msg.guild.channels.find("name", "buddy-quest-lab").sendMessage("Olá, "+msg.author+"\nAdicionado ás notificações da Quest de "+msg.content.substring(1)+", no canal "+msg.guild.channels.find("name", "quest-notificacao") );
+    msg.guild.channels.find("name", "exraid").sendMessage(msg.author);
     
       
      regra=msg.content.substring(1).toUpperCase();
@@ -560,7 +560,7 @@ for (var x = 0; x < tamanhoFicheiro; x++) {
     regra=msg.content.substring(1).toUpperCase();
      role = msg.guild.roles.find(role => role.name === regra);
     msg.member.removeRole(role);
-     msg.guild.channels.find("name", "buddy-quest-lab").sendMessage("Olá, "+msg.author+"\nRemovido das notificações da Quest de "+msg.content.substring(1)+", no canal "+msg.guild.channels.find("name", "quest-notificacao") );
+     msg.guild.channels.find("name", "exraid").sendMessage(msg.author+"\nRemovido da Ex-RAID ");
    
   }
  
