@@ -1,36 +1,13 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js')
+const client = new Discord.Client()
 
-const client = new Discord.Client();
+client.on('message', (receivedMessage) => {
+    // Prevent bot from responding to its own messages
+    if (receivedMessage.author == client.user) {
+        return
+    }
 
-
-
-
-
-client.on("message", async (msg) => {
-   
-        if (msg.content.startsWith("!")) {
-
-            msg.channel.send("oi");
-
-          
-        }   // fim do inicio carater
-
-    
-
-    //fim criar canal----
-
-
-    
-    
-    
-    
-    
-    
-    
-
-
-    //--- fim teste ----
-
-});
+    receivedMessage.channel.send("Message received: " + receivedMessage.content)
+})
 
 client.login(process.env.BOT_TOKEN);
