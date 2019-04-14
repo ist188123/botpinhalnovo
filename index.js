@@ -1,18 +1,24 @@
-
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 
+const prefix = '</';
 
-client.on('ready', () => {
-  console.log("I'm in");
-  console.log(client.user.username);
-});
+bot.on('message', message => {
 
-client.on('message', msg => {
-    if (msg.author.id != client.user.id) {
-        msg.channel.send(msg.content.split('').reverse().join(''));
+    let msg = message.content.toUpperCase();
+    let sender = message.author;
+    let cont = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
+
+    if (msg === prefix + 'PING') {
+        message.channel.send('PONG!');
+        return;
     }
+
 });
 
+bot.on('ready', () => {
+    console.log('WINGGGGGGG!');
+});
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
