@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var request = require('request')  /* npm install request */
-  , fs = require('fs')
-  , file_path = './ocr_sample.png'
-  ;
+
 
 const prefix = '</';
 
