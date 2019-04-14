@@ -6,13 +6,11 @@ const client = new Discord.Client();
 
 
 
-
 client.on("message", async (msg) => {
    
-
         if (msg.content.startsWith("!")) {
 
-            message.author.send("oi");
+            msg.channel.send("oi");
 
           
         }   // fim do inicio carater
