@@ -1,13 +1,18 @@
-const Discord = require('discord.js')
-const client = new Discord.Client()
 
-client.on('message', (receivedMessage) => {
-    // Prevent bot from responding to its own messages
-    if (receivedMessage.author == client.user) {
-        return
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+
+client.on('ready', () => {
+  console.log("I'm in");
+  console.log(client.user.username);
+});
+
+client.on('message', msg => {
+    if (msg.author.id != client.user.id) {
+        msg.channel.send(msg.content.split('').reverse().join(''));
     }
+});
 
-    receivedMessage.channel.send("Message received: " + receivedMessage.content)
-})
 
 client.login(process.env.BOT_TOKEN);
