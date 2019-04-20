@@ -11,7 +11,7 @@ bot.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
 
-    if (msg === '/q') {
+    if (msg === '/Q') {
         message.channel.send('PONG!');
         return;
     }
