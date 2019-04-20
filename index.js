@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>discord.js Webpack test</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    (() => {
+
+
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -33,3 +45,7 @@ bot.on('message', message => {
 
 
 bot.login(process.env.BOT_TOKEN);
+} ();
+</script>
+</body>
+</html>
