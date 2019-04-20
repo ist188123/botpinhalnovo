@@ -16,8 +16,7 @@ bot.on('message', message => {
           +'1 - EVOLUIR - OVOS\n'
           +'2 - BATALHAS GINÁSIO - RAIDS\n'
           +'3 - LANCAMENTOS\n'
-          +'4 - APANHAR EVOLUIR\n'
-                             ');
+          +'4 - APANHAR EVOLUIR\n');
         return;
     }
 
