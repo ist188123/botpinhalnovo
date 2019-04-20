@@ -12,7 +12,12 @@ bot.on('message', message => {
     let args = cont.slice(1);
 
     if (msg === '/Q') {
-        message.channel.send('PONG!');
+        message.channel.send('Bem vindo as Quests.\n para introduzir uma Quest escolha a opção\n'
+          +'1 - EVOLUIR - OVOS\n'
+          +'2 - BATALHAS GINÁSIO - RAIDS\n'
+          +'3 - LANCAMENTOS\n'
+          +'4 - APANHAR EVOLUIR\n'
+                             ');
         return;
     }
 
