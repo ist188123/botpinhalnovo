@@ -11,7 +11,7 @@ bot.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
 
-    if (msg === prefix + 'PING') {
+    if (msg === '/q') {
         message.channel.send('PONG!');
         return;
     }
