@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 
-const prefix = '</';
+const prefix = '/q';
 
 bot.on('message', message => {
 
@@ -18,8 +18,6 @@ bot.on('message', message => {
 
 });
 
-bot.on('ready', () => {
-    console.log('WINGGGGGGG!');
-});
+
 
 bot.login(process.env.BOT_TOKEN);
