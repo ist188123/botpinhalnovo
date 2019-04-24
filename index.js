@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const ping = require("monents.js");
 
 
 client.on('message', (receivedMessage) => {
