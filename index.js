@@ -8,7 +8,7 @@ bot.on('message', message => {
 
     
 
-    if (msg === '#5') {
+    if (message === '#5') {
         message.channel.send('Bem vindo as Quests.\n para introduzir uma Quest escolha a opção\n'
           +'1  OVOS\n'
           +'2  BATALHAS GINÁSIO/RAIDS\n'
