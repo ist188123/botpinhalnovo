@@ -22,7 +22,7 @@ var add_minutes =  function (dt, minutes) {
 
 
 
-function informa_raid(message){
+function informa_raid(message,abre_ovo,abre_raid,termina_raid){
 	
 	message.channel.send({embed: {
     color: 3447003,
@@ -38,12 +38,17 @@ function informa_raid(message){
         value: "They can have different fields with small headlines."
       },
       {
-        name: "Masked links",
-        value: "You can put [masked links](http://google.com) inside of rich embeds."
+        name: "Ovo",
+        value: abre_ovo
       },
       {
-        name: "Markdown",
-        value: "You can put all the *usual* **__Markdown__** inside of them."
+        name: "Abre",
+        value: abre_raid
+      }
+	     ,
+      {
+        name: "Termina",
+        value: termina_raid
       }
     ],
     timestamp: new Date(),
@@ -64,12 +69,12 @@ client.on("message", (message) => {
 if(message.content == "!ping"){ // Check if content of message is "!ping"
 	
 	message.channel.send("Data : "+dia(new Date()));
-       message.channel.send("Ovo : "+add_minutes(new Date(), -40).toString());
-       message.channel.send("Abre : "+add_minutes(new Date(), 5).toString());
-       message.channel.send("Termina : "+add_minutes(new Date(), 50).toString());
+   var  abre_ovo=  add_minutes(new Date(), -40).toString();
+   var  abre_raid= add_minutes(new Date(), 5).toString();
+   var  termina_raid=  add_minutes(new Date(), 50).toString();
 
 		
-	informa_raid(message);
+	informa_raid(message,abre_ovo,abre_raid,termina_raid);
 
 		
 	
