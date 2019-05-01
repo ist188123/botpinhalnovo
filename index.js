@@ -22,7 +22,7 @@ var add_minutes =  function (dt, minutes) {
 
 
 
-function informa_raid(message,abre_ovo,abre_raid,termina_raid){
+function informa_raid(message,abre_ovo,tempo_raid){
 	const embed = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
   .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
@@ -44,8 +44,8 @@ function informa_raid(message,abre_ovo,abre_raid,termina_raid){
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
-  .addField("Inline Field", "They can also be inline.", true)
-  .addField("Inline Field", "They can also be inline.", true)
+  .addField("Criada por:", "dfadsfaf.", true)
+  .addField("Estado :", tempo_raid, true)
 .addField("Inline Field", "They can also be inline.", true)
   /*
    * Blank field, useful to create some space.
@@ -67,11 +67,11 @@ if(message.content == "!ping"){ // Check if content of message is "!ping"
 	
 	message.channel.send("Data : "+dia(new Date()));
    var  abre_ovo=  add_minutes(new Date(), -40).toString();
-   var  abre_raid= add_minutes(new Date(), 5).toString();
-   var  termina_raid=  add_minutes(new Date(), 50).toString();
+   var  tempo_raid="Aberta das : "+ add_minutes(new Date(), 5).toString()+ " até : "+add_minutes(new Date(), 50).toString();
+ 
 
 		
-	informa_raid(message,abre_ovo,abre_raid,termina_raid);
+	informa_raid(message,abre_ovo,tempo_raid);
 
 		
 	
