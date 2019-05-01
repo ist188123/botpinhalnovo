@@ -3,7 +3,7 @@ const client = new Discord.Client();
 require('date-utils');
 
 
-let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+
 client.on("message", (message) => {
 if(message.content == "!ping"){ // Check if content of message is "!ping"
 	
