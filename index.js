@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client(); 
-let date = require('date-and-time');
+var moment = require('moment');
 
 
 
