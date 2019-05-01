@@ -32,7 +32,7 @@ function informa_raid(message,abre_ovo,abre_raid,termina_raid){
   .setColor(0x00AE86)
   .setDescription("This is the main body of text, it can hold 2048 characters.")
   .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
-  .setImage("http://i.imgur.com/yVpymuV.png")
+  
   .setThumbnail("http://i.imgur.com/p2qNFag.png")
   /*
    * Takes a Date object, defaults to current date.
