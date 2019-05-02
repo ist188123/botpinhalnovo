@@ -88,7 +88,7 @@ const config = {
 }
  
 tesseract
-  .recognize('./path/to/image.jpg', config)
+  .recognize('image.jpg', config)
   .then(text => {
     console.log('Result:', text)
   })
