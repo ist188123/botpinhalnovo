@@ -79,7 +79,22 @@ if(message.content == "!ping"){ // Check if content of message is "!ping"
 	
 	
 	
-	
+	const tesseract = require('node-tesseract-ocr');
+ 
+const config = {
+  lang: 'eng',
+  oem: 1,
+  psm: 3
+}
+ 
+tesseract
+  .recognize('./path/to/image.jpg', config)
+  .then(text => {
+    console.log('Result:', text)
+  })
+  .catch(err => {
+    console.log('error:', err)
+  });
 	
 	
 	
