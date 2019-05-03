@@ -70,42 +70,9 @@ if(message.content == "!ping"){ // Check if content of message is "!ping"
 	message.channel.send("Data : "+dia(new Date()));
    var  abre_ovo=  add_minutes(new Date(), -40).toString();
    var  tempo_raid="Aberta das : "+ add_minutes(new Date(), 5).toString()+ " até : "+add_minutes(new Date(), 50).toString();
- 
-
-		
+   
 	informa_raid(message,abre_ovo,tempo_raid);
 
-		
-	
-	
-	
-	const tesseract = require('node-tesseract-ocr');
- 
-const config = {
-  lang: 'eng',
-  oem: 1,
-  psm: 3
-}
- 
-tesseract
-  .recognize('image1.jpg', config)
-  .then(text => {
-    console.log('Result:', text)
-  })
-  .catch(err => {
-    console.log('error:', err)
-  });
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }//fim ping
 	
