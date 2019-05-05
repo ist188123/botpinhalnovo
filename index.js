@@ -22,7 +22,7 @@ var add_minutes =  function (dt, minutes) {
 
 
 
-function informa_raid(message,abre_ovo,tempo_raid,cc){
+function informa_raid(message,abre_ovo,tempo_raid){
 	const embed = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
   .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
@@ -47,7 +47,7 @@ function informa_raid(message,abre_ovo,tempo_raid,cc){
  .addField(tempo_raid, "", false)
   .addField("Criada por:", "dfadsfaf.", true)
   
-  .addField(cc, "Hora enviao msg.", true)
+  .addField("ffff", "Hora enviao msg.", true)
  .addField("autor", "They can also be inline.", true)
   /*
    * Blank field, useful to create some space.
@@ -71,7 +71,7 @@ if(message.content == "!ping"){ // Check if content of message is "!ping"
    var  abre_ovo=  add_minutes(new Date(), -40).toString();
    var  tempo_raid="Aberta das : "+ add_minutes(new Date(), 5).toString()+ " até : "+add_minutes(new Date(), 50).toString();
    
-	informa_raid(message,abre_ovo,tempo_raid, message.createdTimestamp);
+	informa_raid(message,abre_ovo,tempo_raid);
 
 
 }//fim ping
