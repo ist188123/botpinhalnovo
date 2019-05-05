@@ -44,7 +44,7 @@ function informa_raid(message,abre_ovo,tempo_raid){
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
- .addField(tempo_raid, "", false)
+ .addField(tempo_raid, "dd", false)
   .addField("Criada por:", "dfadsfaf.", true)
   
   .addField("ffff", "Hora enviao msg.", true)
