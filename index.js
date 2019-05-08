@@ -1,9 +1,9 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 client.on('message', message => {
-  if (message.content === 'ping') {
+  if (message.content === '!n') {
     
-    
+    var msg=message.content.split('!')
     
     message.channel.send({embed: {
     color: 3447003,
@@ -12,7 +12,7 @@ client.on('message', message => {
       icon_url: client.user.avatarURL
     },
     title: "This is an embed",
-    url: "http://google.com",
+    url: "https://www.google.com/maps/dir/?api=1&destination=",
     description: "This is a test embed to showcase what they look like and what they can do.",
     fields: [{
         name: "Fields",
