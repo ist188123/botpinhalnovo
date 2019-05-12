@@ -13,8 +13,8 @@ client.on('message', message => {
    */
   .setColor(0x00AE86)
   .setDescription("This is the main body of text, it can hold 2048 characters.")
-  .setFooter("This is the footer text, it can hold 2048 characters", "./img/Snorlax.png")
-  .setImage("http://i.imgur.com/yVpymuV.png")
+  .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/p2qNFag.png")
+  .setImage("./img/Snorlax.png")
   .setThumbnail("http://i.imgur.com/p2qNFag.png")
   /*
    * Takes a Date object, defaults to current date.
