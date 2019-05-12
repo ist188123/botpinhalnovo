@@ -11,8 +11,8 @@ client.on('message', message => {
   .addField("Age", "12")
   .addField("Description", "Im good at siege, I stream occasionally and ya")
   .setColor("#020B0C")
-  .attachFile('./avatar.png')
-  .setImage('attachment://avatar.png');
+  .attachFile('./img/Alakazam.png')
+  .setImage('attachment://Alakazam.png');
 message.channel.sendEmbed(myInfo);
  
  
