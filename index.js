@@ -14,7 +14,7 @@ client.on('message', message => {
   .setColor(0x00AE86)
   .setDescription("This is the main body of text, it can hold 2048 characters.")
   .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/p2qNFag.png")
-  .setImage("https://github.com/ist188123/botpinhalnovo/blob/master/img/Alakazam.png")
+  .setImage("/img/Alakazam.png")
   .setThumbnail("http://i.imgur.com/p2qNFag.png")
   /*
    * Takes a Date object, defaults to current date.
