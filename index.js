@@ -7,7 +7,7 @@ client.on('message', message => {
  
   const exampleEmbed = new Discord.RichEmbed()
 	.setTitle('Some title')
-	.attachFiles(['./img/'+text])
+	.attachFiles([text])
 	.setImage('attachment://'+text);  
     
     message.channel.sendEmbed(exampleEmbed);
