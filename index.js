@@ -36,7 +36,15 @@ client.on('message', message => {
   }
 };
 	  
-	  message.channel.sendEmbed(embed);
+	  
+	  
+	message.channel.send({
+  embed,
+  files: [{
+    attachment:'./img/Articune.png',
+    name:'Articune.png'
+  }]
+});
   
     
 	  
