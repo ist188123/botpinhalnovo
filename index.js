@@ -8,15 +8,12 @@ client.on('message', message => {
  //---------
   
 
-  
-  message.channel.send({
-  embed,
-  files: [{
-    attachment:'img/Articune.png',
-    name:'Articune.png'
-  }]
-});
-	  
+ const attachment = new Discord.Attachment('./img/Articune.png', 'Articune.png');
+const embed = new RichEmbed()
+        .setTitle('Wicked Sweet Title')
+        .attachFile(attachment)
+        .setImage('attachment://Articune.png');
+message.channel.send({embed}) 
 	  
 	  
 //---------	  
