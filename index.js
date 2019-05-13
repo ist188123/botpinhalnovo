@@ -40,7 +40,7 @@ message.channel.send({
   embed,
   files: [{
     attachment:'./img/'+ms,
-    name:v
+    name:ms
   }]
 });
 	  
