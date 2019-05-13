@@ -8,12 +8,40 @@ client.on('message', message => {
  //---------
   //Articuno.png
 
- const attachment = new Discord.Attachment('./img/Articuno.png', 'Articuno.png');
-const embed = new RichEmbed()
-        .setTitle('Wicked Sweet Title')
-        .attachFile(attachment)
-        .setImage('attachment://Articuno.png');
-message.channel.send({embed}) 
+const embed = {
+  "title": "A Title" ,
+  "color": 0xF96221,
+  "thumbnail": {
+    "url": "attachment://Articuno.png"
+  },
+  "fields": [
+    {
+      "name": "Field 1:",
+      "value": "One",
+      "inline": false
+    },
+    {
+      "name": "Field 2:",
+      "value": "Two",
+      "inline": true,
+    },
+    {
+      "name":"Field 3:",
+      "value":"Three",
+      "inline": true
+    },
+  ],
+  "footer": {
+    "text":"Footer text"
+  }
+};
+message.channel.send({
+  embed,
+  files: [{
+    attachment:'./img/Articuno.png',
+    name:'Articuno.png'
+  }]
+});
 	  
 	  
 //---------	  
