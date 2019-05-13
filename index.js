@@ -4,7 +4,8 @@ client.on('message', message => {
   if (message.content === '!') {
     
  var v="Articuno.png";
-  var ms=message.content.substring(1)
+  var ms=message.content.substring(1);
+ message.channel.send(ms);
  //---------
   //Articuno.png
 
