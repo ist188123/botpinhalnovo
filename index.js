@@ -38,7 +38,7 @@ client.on('message', message => {
 message.channel.send({
   embed,
   files: [{
-    attachment:'img/image.png',
+    attachment:'./img/Articune.png',
     name:'image.png'
   }]
 });	  
