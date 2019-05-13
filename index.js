@@ -3,7 +3,7 @@ const client = new Discord.Client()
 client.on('message', message => {
   if (message.content === '!') {
     
- 
+ var v="Articuno.png";
   
  //---------
   //Articuno.png
@@ -12,7 +12,7 @@ const embed = {
   "title": "A Title" ,
   "color": 0xF96221,
   "thumbnail": {
-    "url": "attachment://Articuno.png"
+    "url": "attachment://"+v
   },
   "fields": [
     {
@@ -38,8 +38,8 @@ const embed = {
 message.channel.send({
   embed,
   files: [{
-    attachment:'./img/Articuno.png',
-    name:'Articuno.png'
+    attachment:'./img/'+v,
+    name:v
   }]
 });
 	  
