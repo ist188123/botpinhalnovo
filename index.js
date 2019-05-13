@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 client.on('message', message => {
   if (message.content === '!') {
-    
+    var v=pkbicho(message.content);
  
  //---------
   //Articuno.png
@@ -11,7 +11,7 @@ const embed = {
   "title": "A Title" ,
   "color": 0xF96221,
   "thumbnail": {
-    "url": "attachment://"+pkbicho(message.content)
+    "url": "attachment://"+v
   },
   "fields": [
     {
@@ -37,8 +37,8 @@ const embed = {
 message.channel.send({
   embed,
   files: [{
-    attachment:'./img/'+pkbicho(message.content),
-    name:pkbicho(message.content)
+    attachment:'./img/'+v,
+    name:v
   }]
 });
 	  
@@ -49,7 +49,7 @@ message.channel.send({
 	
 var pkbicho= function(x){
 
-   return pkbicho=x.substring(1);
+   return pkbicho=x.substring(1)+".png";
 }
 	
 	
