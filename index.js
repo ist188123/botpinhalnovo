@@ -9,9 +9,9 @@ client.on('message', message => {
     const embed = {
   "title": "A Title" ,
   "color": 0xF96221,
-
+ "attachFile" : "./img/Articune.png",
   "thumbnail": {
-	  "attachFile" : "./img/Articune.png",
+	 
     "url": "attachment://Articune.png"
   },
   "fields": [
