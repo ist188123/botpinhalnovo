@@ -9,7 +9,9 @@ client.on('message', message => {
     const embed = {
   "title": "A Title" ,
   "color": 0xF96221,
+
   "thumbnail": {
+	  "attachFile" : "./img/Articune.png",
     "url": "attachment://Articune.png"
   },
   "fields": [
@@ -35,15 +37,7 @@ client.on('message', message => {
 };
 	  
 	  
-message.channel.send({
-  embed,
-  files: [{
-    attachment:'./img/Articune.png',
-    name:'Articune.png'
-  }]
-});	  
-	  
-	  
+  
     
 	  
 	  
