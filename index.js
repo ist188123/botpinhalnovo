@@ -4,19 +4,60 @@ client.on('message', message => {
   if (message.content === '!') {
     
     var text = message.content.substring(1);
- 
- 
+  var imagem="./img/Articune.png"
+  var attimage="Articune.png"
+ //---------
   
-    
-	 message.channel.send('Message that goes above image', {
-            files: [
-                "./img/Articune.png"
-            ]
-        });  
+   
+  const embed = {
+  "title": "A Title" ,
+  "color": 0xF96221,
+  "thumbnail": {
+    "url": "attachment://Articune.png"
+  },
+  "fields": [
+    {
+      "name": "Field 1:",
+      "value": "One",
+      "inline": false
+    },
+    {
+      "name": "Field 2:",
+      "value": "Two",
+      "inline": true,
+    },
+    {
+      "name":"Field 3:",
+      "value":"Three",
+      "inline": true
+    },
+  ],
+  "footer": {
+    "text":"Footer text"
+  }
+};
+  
+  
+  message.channel.send({
+  embed,
+  files: [{
+    attachment:'./img/Articune.png',
+    name:'Articune.png'
+  }]
+});
+  
+  
+  
+  
+  
+  
+  
+  
+  
 	  
 	  
 	  
-	  
+//---------	  
   }
 })
 client.login(process.env.BOT_TOKEN)
