@@ -3,12 +3,7 @@ const client = new Discord.Client()
 client.on('message', message => {
   if (message.content === '!') {
     
- var v="Fearow.png";
-  var ms=message.content.substring(1);
- if(ms=="Articuno"){
-	  v="Articuno.png";
-	 message.channel.send(v);
- }
+ 
  //---------
   //Articuno.png
 
@@ -16,7 +11,7 @@ const embed = {
   "title": "A Title" ,
   "color": 0xF96221,
   "thumbnail": {
-    "url": "attachment://"+v
+    "url": "attachment://"+pkbicho(message.content)
   },
   "fields": [
     {
@@ -42,13 +37,22 @@ const embed = {
 message.channel.send({
   embed,
   files: [{
-    attachment:'./img/'+v,
-    name:v
+    attachment:'./img/'+pkbicho(message.content),
+    name:pkbicho(message.content)
   }]
 });
 	  
 	  
 //---------	  
   }
+	
+	
+var pkbicho= function(x){
+
+   return pkbicho=x.substring(1);
+}
+	
+	
+	
 })
 client.login(process.env.BOT_TOKEN)
