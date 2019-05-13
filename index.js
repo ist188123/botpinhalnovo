@@ -4,7 +4,7 @@ client.on('message', message => {
   if (message.content === '!') {
     
  var v="Articuno.png";
-  
+  var ms=message.content.substring(1)
  //---------
   //Articuno.png
 
@@ -12,7 +12,7 @@ const embed = {
   "title": "A Title" ,
   "color": 0xF96221,
   "thumbnail": {
-    "url": "attachment://"+v
+    "url": "attachment://"+ms
   },
   "fields": [
     {
@@ -38,7 +38,7 @@ const embed = {
 message.channel.send({
   embed,
   files: [{
-    attachment:'./img/'+v,
+    attachment:'./img/'+ms,
     name:v
   }]
 });
