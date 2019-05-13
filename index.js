@@ -6,13 +6,13 @@ client.on('message', message => {
  
   
  //---------
-  
+  //Articuno.png
 
- const attachment = new Discord.Attachment('./img/Articune.png', 'Articune.png');
+ const attachment = new Discord.Attachment('./img/Articuno.png', 'Articuno.png');
 const embed = new RichEmbed()
         .setTitle('Wicked Sweet Title')
         .attachFile(attachment)
-        .setImage('attachment://Articune.png');
+        .setImage('attachment://Articuno.png');
 message.channel.send({embed}) 
 	  
 	  
