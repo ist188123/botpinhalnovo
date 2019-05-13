@@ -7,6 +7,7 @@ client.on('message', message => {
   var ms=message.content.substring(1);
  if(ms=="Articuno"){
 	  v="Articuno.png";
+	 message.channel.send(v);
  }
  //---------
   //Articuno.png
