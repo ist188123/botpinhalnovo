@@ -5,12 +5,44 @@ client.on('message', message => {
     
     var text = message.content.substring(1);
  
-  const exampleEmbed = new Discord.RichEmbed()
-	.setTitle('Some title')
-	.attachFiles([text])
-	.setImage('attachment://'+text);  
-    
-    message.channel.sendEmbed(exampleEmbed);
+ 
+    const embed = {
+  "title": "A Title" ,
+  "color": 0xF96221,
+  "thumbnail": {
+    "url": "attachment://Articune.png"
+  },
+  "fields": [
+    {
+      "name": "Field 1:",
+      "value": "One",
+      "inline": false
+    },
+    {
+      "name": "Field 2:",
+      "value": "Two",
+      "inline": true,
+    },
+    {
+      "name":"Field 3:",
+      "value":"Three",
+      "inline": true
+    },
+  ],
+  "footer": {
+    "text":"Footer text"
+  }
+};
+	  
+	  
+	  
+	  
+    message.channel.sendEmbed(embed);
+	  
+	  
+	  
+	  
+	  
   }
 })
 client.login(process.env.BOT_TOKEN)
