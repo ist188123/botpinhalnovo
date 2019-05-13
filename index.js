@@ -39,7 +39,7 @@ message.channel.send({
   embed,
   files: [{
     attachment:'./img/Articune.png',
-    name:'image.png'
+    name:'Articune.png'
   }]
 });	  
 	  
