@@ -15,7 +15,7 @@ client.on('message', message => {
   .setColor("#020B0C")
   .attachFile('./img/Articune.png')
   .setImage('attachment://Articune.png');
-message.channel.sendEmbed(myInfo);
+message.channel.send(myInfo);
   
   
   
