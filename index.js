@@ -7,13 +7,15 @@ client.on('message', message => {
   var imagem="./img/Articune.png"
   var attimage="Articune.png"
  //---------
-  
+
   const exampleEmbed = new Discord.RichEmbed()
 	.setTitle('Some title')
 	.attachFiles(['./img/Articune.png'])
 	.setImage('attachment://Articune.png');
 
-channel.send(exampleEmbed);
+message.send(exampleEmbed);
+  
+
   
   
 	  
