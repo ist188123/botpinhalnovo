@@ -3,7 +3,7 @@ const client = new Discord.Client()
 client.on('message', message => {
   if (message.content === '!') {
     
- var v="";
+ var v="Fearow.png";
   var ms=message.content.substring(1);
  if(ms=="Articuno"){
 	  v="Articuno.png";
