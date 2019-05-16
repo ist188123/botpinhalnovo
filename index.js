@@ -1,7 +1,13 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 client.on('message', message => {
-  if (message.content === '!') {
+
+var pkbicho= function(x){
+
+   return pkbicho=x.substring(1)+".png";
+}
+	
+  if (message.content.startsWith("!")) {
     var v=pkbicho(message.content);
  
  //---------
@@ -47,10 +53,7 @@ message.channel.send({
   }
 	
 	
-var pkbicho= function(x){
 
-   return pkbicho=x.substring(1)+".png";
-}
 	
 	
 	
