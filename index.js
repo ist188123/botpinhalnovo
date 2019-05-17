@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const Tesseract = require('tesseract.js')
+
 const client = new Discord.Client()
 client.on('message', message => {
 
