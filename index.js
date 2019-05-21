@@ -58,7 +58,7 @@ const embed = {
       "inline": true
     },
   ],
-	
+   description: "This is a test embed to showcase what they look like and what they can do.",	
 timestamp: new Date(),
     footer: {
 	    
