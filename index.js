@@ -10,7 +10,7 @@ var pkbicho= function(x){
 
 
 if (message.content.startsWith("#?")) {
-	
+	message.reply("#imagem #Nome evento #dia #horas inicio #hora fim #informação");
 }
 
 
@@ -58,9 +58,14 @@ const embed = {
       "inline": true
     },
   ],
-  "footer": {
-    "text":""+informacao
-  }
+	
+timestamp: new Date(),
+    footer: {
+	    
+      icon_url: "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png",
+      text: "PN PoGo Raids, pubicado "
+    }
+
 };
 message.channel.send({
   embed,
