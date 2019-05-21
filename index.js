@@ -7,13 +7,28 @@ var pkbicho= function(x){
 
    return pkbicho=x+".png";
 }
+
+
+if (message.content.startsWith("#?")) {
+	
+}
+
+
+
 	
   if (message.content.startsWith("#")) {
-	 var pkmpos=message.content.split("#"); 
+
+	 
+	  
+	  var pkmpos=message.content.split("#"); 
 	 
    var v=pkbicho(pkmpos[1].trim());
-	  
-	var dia=  pkmpos[2];
+	 
+	var nomeEvento=pkmpos[2];
+	var dia=  pkmpos[3];
+	  var horainicio=  pkmpos[4];
+	   var horafim=  pkmpos[5];
+	  var informacao=  pkmpos[6];
 	  
 	  
  
@@ -21,30 +36,30 @@ var pkbicho= function(x){
   //Articuno.png
 
 const embed = {
-  "title": "Evento" ,
+  "title": ""+nomeEvento ,
   "color": 0xF96221,
   "thumbnail": {
     "url": "attachment://"+v
   },
   "fields": [
     {
-      "name": "Data:",
+      "name": "Dia: ",
       "value": ""+dia,
       "inline": false
     },
     {
-      "name": "Field 2:",
-      "value": "Two",
+      "name": "Inicio:",
+      "value": ""+horainicio,
       "inline": true,
     },
     {
-      "name":"Field 3:",
-      "value":"Three",
+      "name":"Fim:",
+      "value":""+horafim,
       "inline": true
     },
   ],
   "footer": {
-    "text":"Footer text"
+    "text":""+informacao
   }
 };
 message.channel.send({
