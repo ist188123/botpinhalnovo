@@ -5,13 +5,13 @@ client.on('message', message => {
 
 var pkbicho= function(x){
 
-   return pkbicho=x.substring(1)+".png";
+   return pkbicho=x+".png";
 }
 	
   if (message.content.startsWith("#")) {
 	 var pkmpos=message.content.split("#"); 
-	  var v=pkmpos[1]
-   // var v=pkbicho(message.content);
+	 
+   var v=pkbicho(pkmpos[1]);
  
  //---------
   //Articuno.png
