@@ -12,20 +12,24 @@ var pkbicho= function(x){
 	 var pkmpos=message.content.split("#"); 
 	 
    var v=pkbicho(pkmpos[1].trim());
+	  
+	var dia=  pkmpos[2];
+	  
+	  
  
  //---------
   //Articuno.png
 
 const embed = {
-  "title": "A Title" ,
+  "title": "Evento" ,
   "color": 0xF96221,
   "thumbnail": {
     "url": "attachment://"+v
   },
   "fields": [
     {
-      "name": "Field 1:",
-      "value": "One",
+      "name": "Data:",
+      "value": ""+dia,
       "inline": false
     },
     {
