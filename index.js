@@ -11,7 +11,7 @@ var pkbicho= function(x){
   if (message.content.startsWith("#")) {
 	 var pkmpos=message.content.split("#"); 
 	 
-   var v=pkbicho(pkmpos[1]);
+   var v=pkbicho(pkmpos[1].trim());
  
  //---------
   //Articuno.png
