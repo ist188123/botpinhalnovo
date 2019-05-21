@@ -9,6 +9,8 @@ var pkbicho= function(x){
 }
 
 
+
+if (msg.channel.name == 'adm-pg-raids') {
 if (message.content.startsWith("#?")) {
 	message.reply("#imagem #Nome evento #dia #horas inicio #hora fim #informação");
 }
@@ -58,7 +60,7 @@ const embed = {
       "inline": true
     },
   ],
-   description: "This is a test embed to showcase what they look like and what they can do.",	
+   description: ""+informacao,	
 timestamp: new Date(),
     footer: {
 	    
@@ -67,7 +69,9 @@ timestamp: new Date(),
     }
 
 };
-message.channel.send({
+	//  msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({ embed });
+//message.channel.send({
+	message.guild.channels.find("name", "eventos-ativos").sendMessage
   embed,
   files: [{
     attachment:'./img/'+v,
@@ -80,7 +84,7 @@ message.channel.send({
   }
 	
 	
-
+}
 	
 	
 	
