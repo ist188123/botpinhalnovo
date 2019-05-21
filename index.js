@@ -8,8 +8,10 @@ var pkbicho= function(x){
    return pkbicho=x.substring(1)+".png";
 }
 	
-  if (message.content.startsWith("!")) {
-    var v=pkbicho(message.content);
+  if (message.content.startsWith("#")) {
+	 var pkmpos=message.content.split("#"); 
+	  var v=pkmpos[1]
+   // var v=pkbicho(message.content);
  
  //---------
   //Articuno.png
