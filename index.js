@@ -10,7 +10,7 @@ var pkbicho= function(x){
 
 
 
-if (msg.channel.name == 'adm-pg-raids') {
+if (message.channel.name == 'adm-pg-raids') {
 if (message.content.startsWith("#?")) {
 	message.reply("#imagem #Nome evento #dia #horas inicio #hora fim #informação");
 }
