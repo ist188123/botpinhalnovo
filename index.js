@@ -71,7 +71,7 @@ timestamp: new Date(),
 };
 	//  msg.guild.channels.find("name", "raids-pinhal-novo").sendMessage({ embed });
 //message.channel.send({
-	message.guild.channels.find("name", "eventos-ativos").sendMessage
+	message.guild.channels.find("name", "eventos-ativos").sendMessage({
   embed,
   files: [{
     attachment:'./img/'+v,
