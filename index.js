@@ -11,18 +11,18 @@ var pkbicho= function(x){
 
 
 if (message.channel.name == 'adm-pg-raids') {
-if (message.content.startsWith("#?")) {
-	message.reply("#imagem #Nome evento #dia #horas inicio #hora fim #informação");
+if (message.content.startsWith("$?")) {
+	message.reply("$imagem $nome evento $dia $horas inicio $hora fim $informação");
 }
 
 
 
 	
-  if (message.content.startsWith("#")) {
+  if (message.content.startsWith("$")) {
 
 	 
 	  
-	  var pkmpos=message.content.split("#"); 
+	  var pkmpos=message.content.split("$"); 
 	 
    var v=pkbicho(pkmpos[1].trim());
 	 
