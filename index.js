@@ -781,7 +781,7 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
 	
             
 		
-      for (var x = 0; x < json_data.length; x++) {
+      for (var x = 0; x < questMap.length; x++) {
 
         if (cod == questMap[x].cod) {
           quest = questMap[x].quest;
