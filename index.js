@@ -10,18 +10,18 @@ var qsonData = require('./quest.json');
 
 if (message.channel.name == 'adm-pg-raids') {
 	
-  if (message.content.startsWith("$")) {
+  
 
 	message.channel.send('oi.');
 	  
 	  
 //---------	  
-  }
+  
 	
 	
 }
 	
 	
 	
-})
-client.login(process.env.BOT_TOKEN)
+});
+client.login(process.env.BOT_TOKEN);
