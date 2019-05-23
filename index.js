@@ -52,7 +52,7 @@ client.on('message', msg => {
 
 
       let cod = dmsg.split(" ")[0];
- msg.reply(cod);
+
       let pokestop = dmsg.split(" ").slice(1).join(" ");
       let quest = "";
       let missao = "";
@@ -74,7 +74,7 @@ client.on('message', msg => {
           quest = questMap[x].quest;
           missao = questMap[x].missao;
           questimagem = questMap[x].questimagem;
-          notificaQuest(missao,questimagem)
+          notificaQuest(missao,questimagem);
          
         }
       }
