@@ -74,8 +74,26 @@ client.on('message', msg => {
           quest = questMap[x].quest;
           missao = questMap[x].missao;
           questimagem = questMap[x].questimagem;
-          msg.reply(quest);
          
+         //--
+          const embed = new Discord.RichEmbed()
+    .setTitle(quest)
+    .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000044-1157e1263e/450/pstop.png")
+    /*
+     * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+     */
+    .setColor(0x00AE86)
+    .setDescription(missao)
+     .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+    
+    .setThumbnail(questimagem)
+    /*
+     * Takes a Date object, defaults to current date.
+     */
+    .setTimestamp();
+    msg.guild.channels.find("name", "quest").sendMessage({ embed });
+          
+          //---
          
         }
       }
