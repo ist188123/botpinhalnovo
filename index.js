@@ -1,15 +1,14 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const http = require('http');
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+
 
 client.on('message', msg => {
   
   if (msg.content.startsWith('!')) {
 
-
+      var endereco='http://pnraidspn.atwebpages.com/teste.php'
 
       var dmsg = msg.content.substring(1);
 
@@ -21,10 +20,33 @@ client.on('message', msg => {
       let missao = "";
       let questimagem = "";
   
+  let req = http.get(endereco, function(res) {
+        let data = '',
+            questMap;
+    
+        res.on('data', function(stream) {
+            data += stream;
+        });
+        res.on('end', function() {
+            questMap = JSON.parse(data);
+    
+             for (var x = 0; x < questMap.length; x++) {
+
+        if (cod == questMap[x].cod) {
+          quest = questMap[x].quest;
+          missao = questMap[x].missao;
+          questimagem = questMap[x].questimagem;
+
+        }
+      }
+
+            
+        });
+    });
+ 
   
   
-  
-    msg.reply('Pong!');
+    msg.reply(cod +" "+questimagem);
 
     
     
