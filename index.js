@@ -16,11 +16,6 @@ if (message.content.startsWith("$?")) {
 	message.reply("$imagem $nome evento $dia $horas inicio $hora fim $informação");
 }
 
-if (message.content.startsWith("1")) {
-
-	message.guild.channels.find("name", "eventos-ativos").sendMessage("ddd")
-	
-}//fim 1
 
 	
   if (message.content.startsWith("$")) {
