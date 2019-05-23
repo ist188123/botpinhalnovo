@@ -36,7 +36,7 @@ client.on('message', msg => {
           quest = questMap[x].quest;
           missao = questMap[x].missao;
           questimagem = questMap[x].questimagem;
-
+          msg.reply(quest +" "+questimagem);
         }
       }
 
@@ -46,7 +46,7 @@ client.on('message', msg => {
  
   
   
-    msg.reply(cod +" "+questimagem);
+   
 
     
     
