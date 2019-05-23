@@ -14,7 +14,7 @@ client.on('message', msg => {
 
 
       let cod = dmsg.split(" ")[0];
-
+ msg.reply(cod);
       let pokestop = dmsg.split(" ").slice(1).join(" ");
       let quest = "";
       let missao = "";
