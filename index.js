@@ -12,7 +12,7 @@ if (message.channel.name == 'adm-pg-raids') {
 	
   if (message.content.startsWith("$")) {
 
-	message.send("ddd")
+	message.channel.send('oi.');
 	  
 	  
 //---------	  
