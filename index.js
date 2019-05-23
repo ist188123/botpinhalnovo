@@ -5,7 +5,7 @@ var jsonData = require('./raidspn.json');
 const prefix = "+";
 
 const http = require('http');
-var qsonData = require('./quest.json');
+
 
 //console.log(tamanhoFicheiro)
 
@@ -748,7 +748,7 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
 
     if (msg.content.startsWith('!')) {
 
-     var endereco='http://pnraidspn.atwebpages.com/teste.php'
+     var endereco='http://pnraidspn.atwebpages.com/teste.php';
 	    
 	    
 	    
@@ -790,19 +790,7 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
 
         }
       }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-        });
+	 });
     });
 
 //---------------
