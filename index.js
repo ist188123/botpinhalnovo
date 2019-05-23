@@ -4,9 +4,10 @@ const client = new Discord.Client();
 var jsonData = require('./raidspn.json');
 const prefix = "+";
 
-const http = require('http');
 
-
+var qsonData = require('./quest.json');
+var questMap = qsonData.map(x => x)
+var tamanhoFicheiroQuest = Object.keys(questMap).length;
 //console.log(tamanhoFicheiro)
 
 
@@ -748,12 +749,7 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
 
     if (msg.content.startsWith('!')) {
 
-     var endereco='http://pnraidspn.atwebpages.com/teste.php';
-	    
-	    
-	    
-	    
-	    
+
 
       var dmsg = msg.content.substring(1);
 
@@ -766,11 +762,22 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
       let questimagem = "";
       //ler ficheiro   
 
+      ;
+      for (var x = 0; x < tamanhoFicheiroQuest; x++) {
 
-//---------------
-  
+        if (cod == questMap[x].cod) {
+          quest = questMap[x].quest;
+          missao = questMap[x].missao;
+          questimagem = questMap[x].questimagem;
 
-//---------------
+        }
+      }
+
+
+
+
+
+
       let autor = msg.author;
       
       
