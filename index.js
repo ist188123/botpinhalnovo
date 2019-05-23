@@ -12,7 +12,7 @@ client.on('message', msg => {
 
     const embed = new Discord.RichEmbed()
     .setTitle(quest)
-    .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000044-1157e1263e/450/pstop.png")
+    .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000082-90d6a91ce3/450/poket.png)
     /*
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
      */
