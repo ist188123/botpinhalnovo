@@ -6,8 +6,7 @@ const prefix = "+";
 
 const http = require('http');
 var qsonData = require('./quest.json');
-var questMap = qsonData.map(x => x)
-var tamanhoFicheiroQuest = Object.keys(questMap).length;
+
 //console.log(tamanhoFicheiro)
 
 
@@ -767,22 +766,11 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
       let questimagem = "";
       //ler ficheiro   
 
-      
-      for (var x = 0; x < tamanhoFicheiroQuest; x++) {
-
-        if (cod == questMap[x].cod) {
-          quest = questMap[x].quest;
-          missao = questMap[x].missao;
-          questimagem = questMap[x].questimagem;
-
-        }
-      }
-
 
 //---------------
   let req = http.get(endereco, function(res) {
         let data = '',
-            json_data;
+            questMap;
     
         res.on('data', function(stream) {
             data += stream;
