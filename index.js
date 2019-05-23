@@ -768,30 +768,7 @@ var relogio=horas_locais+":"+dhlocal.getMinutes();
 
 
 //---------------
-  let req = http.get(endereco, function(res) {
-        let data = '',
-            questMap;
-    
-        res.on('data', function(stream) {
-            data += stream;
-        });
-        res.on('end', function() {
-            questMap = JSON.parse(data);
-    
-	
-            
-		
-      for (var x = 0; x < questMap.length; x++) {
-
-        if (cod == questMap[x].cod) {
-          quest = questMap[x].quest;
-          missao = questMap[x].missao;
-          questimagem = questMap[x].questimagem;
-
-        }
-      }
-	 });
-    });
+  
 
 //---------------
       let autor = msg.author;
