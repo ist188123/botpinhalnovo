@@ -27,6 +27,7 @@ client.on("message", (message) => {
 
         // will output a Javascript object
         for ( a=0; a<json_data.length;a++){
+		 message.channel.send(json_data[a].boss);
             //console.log(json_data[a].boss);
         }
 		
@@ -40,7 +41,7 @@ client.on("message", (message) => {
     
     
     
-    message.channel.send("pong!");
+   
   }
   
   
