@@ -75,8 +75,7 @@ client.on('message', msg => {
           missao = questMap[x].missao;
           questimagem = questMap[x].questimagem;
           msg.reply(quest);
-          msg.guild.channels.find("name", "quest").sendMessage(quest);
-          notificaQuest(missao,questimagem);
+         
          
         }
       }
