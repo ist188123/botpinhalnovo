@@ -18,33 +18,7 @@ if (message.content.startsWith("$?")) {
 
 if (message.content.startsWith("1")) {
 
-	var endereco='http://pnraidspn.atwebpages.com/teste.php'
-//var jsonData = require('./raidspn.json');
-const http = require('http');
-
-let req = http.get(endereco, function(res) {
-	let data = '',
-		json_data;
-
-	res.on('data', function(stream) {
-		data += stream;
-	});
-	res.on('end', function() {
-		json_data = JSON.parse(data);
-
-        // will output a Javascript object
-        for ( a=0; a<json_data.length;a++){
-		message.guild.channels.find("name", "eventos-ativos").sendMessage(json_data[a].boss)
-          //  console.log(json_data[a].boss);
-        }
-		
-	});
-});
-
-req.on('error', function(e) {
-    console.log(e.message);
-});
-	
+	message.guild.channels.find("name", "eventos-ativos").sendMessage("ddd")
 	
 }//fim 1
 
