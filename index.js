@@ -41,28 +41,7 @@ client.on('message', msg => {
          
          //--
           const embed = new Discord.RichEmbed()
-    .setTitle(quest)
-    .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png")
-    /*
-     * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-     */
-    .setColor(0x00AE86)
-    .setDescription(missao)
-     .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
-    
-    .setThumbnail(questimagem)
-    /*
-     * Takes a Date object, defaults to current date.
-     */
-    .setTimestamp();
-    msg.guild.channels.find("name", "quest").sendMessage({ embed });
-          
-          //---
-          
-          // - - messagem
-          
-          const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#00AE86')
+	  setColor('#00AE86')
 	.setTitle('Localização')
 	.setURL('https://discord.js.org/')
 	.setAuthor(quest, 'https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png')
@@ -74,7 +53,14 @@ client.on('message', msg => {
 	.setImage(questimagem)
 	.setTimestamp()
 	  .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
-      msg.guild.channels.find("name", "quest").sendMessage({ exampleEmbed });      
+     
+    msg.guild.channels.find("name", "quest").sendMessage({ embed });
+          
+          //---
+          
+          // - - messagem
+          
+     
          // -- fim mensagem 
          
         }
