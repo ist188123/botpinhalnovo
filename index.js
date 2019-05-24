@@ -41,25 +41,31 @@ client.on('message', msg => {
          
          //--
           const embed = new Discord.RichEmbed()
-	  .setColor('#00AE86')
-	.setTitle('Localização')
+	  .setColor('#0099ff')
+	.setTitle('Some title')
 	.setURL('https://discord.js.org/')
-	.setAuthor(quest, 'https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png')
-	
+	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+	.setDescription('Some description here')
 	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
-	.addField(missao, ' ')
+	.addField('Regular field title', 'Some value here')
 	.addBlankField()
-	
-	.setImage(questimagem)
+	.addField('Inline field title', 'Some value here', true)
+	.addField('Inline field title', 'Some value here', true)
+	.addField('Inline field title', 'Some value here', true)
+	.setImage('https://i.imgur.com/wSTFkRM.png')
 	.setTimestamp()
-	  .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
-     
+	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+	
     msg.guild.channels.find("name", "quest").sendMessage({ embed });
           
           //---
           
           // - - messagem
-          
+          //.setAuthor(quest, 'https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png')
+	
+	//  .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+     
      
          // -- fim mensagem 
          
