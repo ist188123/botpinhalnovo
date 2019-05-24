@@ -41,23 +41,21 @@ client.on('message', msg => {
          
          //--
           const embed = new Discord.RichEmbed()
-	  .setColor('#0099ff')
-	.setTitle(quest)
-	.setURL('https://discord.js.org/')
-	.setAuthor('', 'https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png')
-	.setDescription('Some description here')
-	.setThumbnail('https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png')
-	.addField('Regular field title', 'Some value here')
-	.addBlankField()
-	.addField('Missão', quest, false)
-	
-	.setImage(questimagem)
-	.setTimestamp()
-	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-
-	
-    msg.guild.channels.find("name", "quest").sendMessage({ embed });
-          
+    .setTitle(quest)
+    .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png")
+    /*
+     * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+     */
+    .setColor(0x00AE86)
+    .setDescription(missao)
+     .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
+    
+    .setThumbnail(questimagem)
+    /*
+     * Takes a Date object, defaults to current date.
+     */
+    .setTimestamp();
+    msg.guild.channels.find("name", "quest").sendMessage({ embed }); 
           //---
           
           // - - messagem
