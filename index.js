@@ -41,7 +41,7 @@ client.on('message', msg => {
          
          //--
           const embed = new Discord.RichEmbed()
-	  setColor('#00AE86')
+	  .setColor('#00AE86')
 	.setTitle('Localização')
 	.setURL('https://discord.js.org/')
 	.setAuthor(quest, 'https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png')
