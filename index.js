@@ -88,6 +88,7 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
          //--
           const embed = new Discord.RichEmbed()
     .setTitle(quest)
+.setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
     .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png")
     /*
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
