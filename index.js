@@ -18,7 +18,7 @@ var pkendereco='http://pnraidspn.atwebpages.com/poketstop.php'
 
 
 
-var pkstQuest="Sem localização";
+var pkstQuest="http://pokemongo.pt";
 var findpoketstop = msg.content.substring(1);
 
 
@@ -42,7 +42,10 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
             for ( a=0; a<pkstMap.length;a++){
               lerpkt=pkstMap[a].cod.toLocaleLowerCase();
                 if(lerpkt.includes(poketstop)){
-                    pkstQuest=pkstMap[a].local;
+			if (lerpkt.startsWith('http')) {
+		             pkstQuest=lerpkt;
+		         }
+                    
                     
                 }
                 
@@ -85,10 +88,15 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
           missao = questMap[x].missao;
           questimagem = questMap[x].questimagem;
          
+		
+		
+		 
+		
+		
          //--
           const embed = new Discord.RichEmbed()
-    .setTitle("Direcção para" +pokestop)
-.setURL(pkstQuest)
+    .setTitle("Direcção para " +pokestop)
+   .setURL(pkstQuest)
     .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png")
     /*
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
@@ -98,8 +106,8 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
      .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
     
     .setThumbnail(questimagem)
-	  .addField('Missão', missao, true)
-	.addField('Recompensa', quest, true)
+	  .addField('Missão', missao, false)
+	.addField('Recompensa', quest, false)
     /*
      * Takes a Date object, defaults to current date.
      */
