@@ -98,6 +98,8 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
      .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
     
     .setThumbnail(questimagem)
+	  .addField('1Inline field title', 'Some value here', true)
+	.addField('2Inline field title', 'Some value here', true)
     /*
      * Takes a Date object, defaults to current date.
      */
