@@ -18,7 +18,7 @@ var pkendereco='http://pnraidspn.atwebpages.com/poketstop.php'
 
 
 
-var pkstQuest="";
+var pkstQuest="Sem localização";
 var findpoketstop = msg.content.substring(1);
 
 
@@ -93,7 +93,7 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
      */
     .setColor(0x00AE86)
-    .setDescription(missao)
+    .setDescription(missao+"\n"+pkstQuest)
      .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
     
     .setThumbnail(questimagem)
