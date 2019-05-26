@@ -10,6 +10,50 @@ client.on('message', msg => {
   
   if (msg.content.startsWith('!')) {
 
+	//---------------  
+	
+	  
+var pkendereco='http://pnraidspn.atwebpages.com/poketstop.php'
+//var jsonData = require('./raidspn.json');
+
+
+
+var pkstQuest="Sem localização!";
+var findpoketstop = msg.content.substring(1);
+
+
+let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findpoketstop.length).trim().toLocaleLowerCase()
+
+
+
+    let reqpkst = http.get(pkendereco, function(res) {
+        let datapkst = ''
+            
+    
+        res.on('data', function(stream) {
+          datapkst += stream;
+        });
+
+        res.on('end', function() {
+            pkstMap = JSON.parse(datapkst);
+            
+            // will output a Javascript object
+            var lerpkt="";
+            for ( a=0; a<pkstMap.length;a++){
+              lerpkt=pkstMap[a].cod.toLocaleLowerCase();
+                if(lerpkt.includes(poketstop)){
+                    pkstQuest=pkstMap[a].local;
+                    
+                }
+                
+            }
+            
+        });
+    });
+	  
+	  
+	//----------------  
+	  
       var endereco='http://pnraidspn.atwebpages.com/teste.php'
 
       var dmsg = msg.content.substring(1);
