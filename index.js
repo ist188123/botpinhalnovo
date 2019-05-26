@@ -102,7 +102,7 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
      */
     .setColor(0x00AE86)
-    .setDescription("Reportado por : "+msg.author.username)
+    .setDescription(" ")
      .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
     
        .setThumbnail(questimagem)
