@@ -105,9 +105,11 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
     .setDescription("Reportado por : "+msg.author.username)
      .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
     
-    .setThumbnail(questimagem)
+       .setThumbnail(questimagem)
 	  .addField('Missão', missao, false)
 	.addField('Recompensa', quest, false)
+	  .addField('Reportado por:', msg.author.username, false)
+	  .setURL(pkstQuest)
     /*
      * Takes a Date object, defaults to current date.
      */
