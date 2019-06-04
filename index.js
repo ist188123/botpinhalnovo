@@ -8,7 +8,7 @@ client.on('message', msg => {
   
   
   
-  if (msg.content.startsWith('!')) {
+  if (msg.content.startsWith('!quest')) {
 
 	//---------------  
 	
@@ -94,26 +94,58 @@ let poketstop = findpoketstop.substring(findpoketstop.split(" ")[0].length,findp
 		
 		
          //--
-          const embed = new Discord.RichEmbed()
-    .setTitle("Direcção para " +pokestop)
-   .setURL(pkstQuest)
-    .setAuthor(pokestop, "https://exraidspinhalnovo.webnode.pt/_files/200000083-e9b0feaad1/450/pkst.png")
-    /*
-     * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-     */
-    .setColor(0x00AE86)
-    .setDescription(" ")
-     .setFooter("PN PoGo Raids, pubicado ", "https://exraidspinhalnovo.webnode.pt/_files/200000022-231042409e/200/damasc010.png")
-    
-       .setThumbnail(questimagem)
-	  .addField('Missão', missao, false)
-	.addField('Recompensa', quest, false)
-	  .addField('Reportado por:', msg.author.username, false)
-	  .setURL(pkstQuest)
-    /*
-     * Takes a Date object, defaults to current date.
-     */
-    .setTimestamp();
+        //  const embed = new Discord.RichEmbed()
+    const embed = {
+	color: 0x0099ff,
+	title: 'Some title',
+	url: 'https://discord.js.org',
+	author: {
+		name: 'Some name',
+		icon_url: 'https://i.imgur.com/wSTFkRM.png',
+		url: 'https://discord.js.org',
+	},
+	description: 'Some description here',
+	thumbnail: {
+		url: 'https://i.imgur.com/wSTFkRM.png',
+	},
+	fields: [
+		{
+			name: 'Regular field title',
+			value: 'Some value here',
+		},
+		{
+			name: '\u200b',
+			value: '\u200b',
+		},
+		{
+			name: 'Inline field title',
+			value: 'Some value here',
+			inline: true,
+		},
+		{
+			name: 'Inline field title',
+			value: 'Some value here',
+			inline: true,
+		},
+		{
+			name: 'Inline field title',
+			value: 'Some value here',
+			inline: true,
+		},
+	],
+	image: {
+		url: 'https://i.imgur.com/wSTFkRM.png',
+	},
+	timestamp: new Date(),
+	footer: {
+		text: 'Some footer text here',
+		icon_url: 'https://i.imgur.com/wSTFkRM.png',
+	},
+};
+	  
+	  
+	  
+	//-- fim mensagnem  
     msg.guild.channels.find("name", "quest").sendMessage({ embed }); 
           //---
           
